@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
@@ -18,7 +18,7 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',True);
 
 //定义网站入口
-define("WEB_ROOT","http://localhost/zxyClothesPlatform/zxy1.02/");
+define("WEB_ROOT","http://localhost/zxyClothesPlatform/zxy1.02/zxyclothpat/");
 //定义css js image路径的常量
 define("CSS_URL",WEB_ROOT."Public/Home/css/");
 define("IMAGE_URL",WEB_ROOT."Public/Home/images/");
