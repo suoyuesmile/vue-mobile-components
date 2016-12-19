@@ -1,0 +1,42 @@
+[ 2016-11-24T14:40:58+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/uploadDesign
+ERR: unable to write file E:/apacheRoot/zxyClothesPlatform/zxy1.02/Runtime/Cache\a5270bdc109363d006fc4596a19355516074c263.file.uploadDesign.html.php
+
+[ 2016-11-24T15:59:05+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T15:59:42+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T15:59:45+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T16:01:02+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T16:01:12+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T16:01:12+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T16:01:12+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T16:01:13+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T16:02:11+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/
+ERR: 非法操作:index
+
+[ 2016-11-24T19:55:26+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/myCircle
+ERR: 非法操作:myCircle
+
+[ 2016-11-24T19:55:41+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/myCircle
+ERR: 非法操作:myCircle
+
+[ 2016-11-24T20:12:16+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/userCenter
+ERR: 模板不存在:E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View/User/userCenter.html
+
+[ 2016-11-24T20:12:42+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/myCircle
+ERR: 非法操作:myCircle
+

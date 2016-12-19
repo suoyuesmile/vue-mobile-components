@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.designerfloor{
+			margin: 0px auto;
+			width: 1083px;
+			height: 360px;
+			border-bottom:1px solid rgba(204, 204, 204, 0.7);
+			border-right:1px solid rgba(204, 204, 204, 0.7);
+		}
+		.designerfloor .designer_plate{
+			float: left;
+			height: 360px;
+			width: 269px;
+			border-left: 1px solid rgba(204, 204, 204, 0.7);
+		}
+		.designer_plate:hover{
+			box-shadow: 2px 2px 15px rgba(204, 204, 204, 0.35);
+		}
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	{foreach $designerfloor as $key}
+	<div class="designerfloor">
+		<div class="designer_plate">
+		</div>
+		<div class="designer_plate">
+		</div>
+		<div class="designer_plate">		
+		</div>
+		<div class="designer_plate">		
+		</div>
+	</div>
+	{/foreach}
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	</script>
+	<style type="text/css">
+		.firstfloor{
+			width: 1180px;
+			margin: 0 auto;
+			height: 350px;
+			border: 1px solid rgba(204, 204, 204, 0.7);
+		}
+		/*.firstfloor .upload_button{
+			width: 128px;
+			height: 128px;
+			margin-left: 526px;
+			margin-top: 30px;
+			background: url({$smarty.const.IMAGE_URL}upload.png) no-repeat;
+			filter: alpha('opacity=50');
+			opacity: 0.5;
+		}*/
+		
+	</style>
+</head>
+<body>
+<div class="firstfloor">
+	<form class="upload_form" action="{$smarty.const.__MODULE__}/User/upload">
+		作品名字<input type="txt" name="title">
+		作品风格
+
+		<input type="file" name="photo" value="选择图片">
+		<input type="submit" name="upload_button" value="上传">
+	</form>
+</div>
+</body>
+</html>

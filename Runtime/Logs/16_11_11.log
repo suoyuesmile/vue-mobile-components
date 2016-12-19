@@ -1,0 +1,15 @@
+[ 2016-11-11T09:14:06+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 7 "*{margin: 0px; padding: 0px;}"  - Unexpected ": ", expected one of: "}" , " "
+
+[ 2016-11-11T09:14:36+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 7 "*{margin: 0px padding: 0px}"  - Unexpected ": ", expected one of: "}" , " "
+
+[ 2016-11-11T09:14:56+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 7 "*{margin: 0 ;padding: 0;}"  - Unexpected ": ", expected one of: "}" , " "
+
+[ 2016-11-11T09:15:33+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 7 "*{margin: 0px ;"  - Unexpected ": ", expected one of: "}" , " "
+
+[ 2016-11-11T09:15:34+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 7 "*{margin: 0px ;"  - Unexpected ": ", expected one of: "}" , " "
+

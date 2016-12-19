@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.firstfloor{
+			position: relative;
+			margin: 0 auto;
+			height: 260px;
+			width: 1180px;
+			border: 1px solid rgba(204, 204, 204, 0.7);
+			background: #eee; 
+		}
+		.firstfloor .upload_img{
+			position: absolute;
+			height: 30px;
+			width: 100px;
+			right: 80px;
+			bottom: 30px;
+			border: 1px solid rgba(204, 204, 204, 0.7);
+			border-radius: 5px;
+			background: #fff;
+
+		}
+		.upload_img a{
+			line-height: 30px;
+			text-decoration: none;
+			color: #000;
+		}
+		.secondfloor{
+			margin: 0 auto;
+			margin-top: 40px; 
+			width:1180px;
+			height: 330px;
+		}
+		.sample_design{
+			position: relative;
+			margin-left:60px; 
+			float:left;
+			width: 220px;
+			height: 330px;
+			border: 1px solid rgba(204, 204, 204, 0.7);
+		} 
+	</style>
+</head>
+<body>
+<div class="firstfloor">
+	<div class="upload_img"><a href="">上传作品</a></div>
+</div>
+{foreach $secondfloor as $key} 
+<div class="secondfloor">
+	<div class="sample_design"></div>
+	<div class="sample_design"></div>
+	<div class="sample_design"></div>
+	<div class="sample_design"></div>
+</div>
+{/foreach}
+</body>
+</html>

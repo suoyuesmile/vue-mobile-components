@@ -1,0 +1,74 @@
+[ 2016-08-01T16:31:23+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001334s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: smarty E:\demo\ugctest\App\Runtime\Cache\Home\44aa782958fd2c2a7317497cae27bccd.php 第 10 行.
+NOTIC: [8] Undefined variable: smarty E:\demo\ugctest\App\Runtime\Cache\Home\44aa782958fd2c2a7317497cae27bccd.php 第 15 行.
+NOTIC: [8] Undefined variable: smarty E:\demo\ugctest\App\Runtime\Cache\Home\44aa782958fd2c2a7317497cae27bccd.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.004099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002752s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000850s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003048s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002413s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004092s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001209s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001273s ]
+
+[ 2016-08-01T18:19:25+08:00 ] ::1 /
+ERR: Syntax Error in template "E:/demo/ugctest/Home/View\Common\header.html"  on line 33 "&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{smarty.cont.__ROOT__}/Public/css/bundle.css&quot;&gt;&lt;/link&gt;"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2016-08-01T18:22:06+08:00 ] ::1 /
+ERR: Syntax Error in template "E:/demo/ugctest/Home/View\Common\header.html"  on line 33 "&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{$smarty.cont.__ROOT__}/Public/css/bundle.css&quot;&gt;&lt;/link&gt;" $smarty.cont is invalid
+
+[ 2016-08-01T18:22:07+08:00 ] ::1 /
+ERR: Syntax Error in template "E:/demo/ugctest/Home/View\Common\header.html"  on line 33 "&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{$smarty.cont.__ROOT__}/Public/css/bundle.css&quot;&gt;&lt;/link&gt;" $smarty.cont is invalid
+
+[ 2016-08-01T18:22:38+08:00 ] ::1 /
+ERR: Syntax Error in template "E:/demo/ugctest/Home/View\Common\header.html"  on line 62 "&lt;!-- &lt;?php if(!empty($_SESSION['user_name'])) {?&gt; --&gt;"  - Unexpected "?"
+
+[ 2016-08-01T18:23:40+08:00 ] ::1 /
+ERR: Syntax Error in template "E:/demo/ugctest/Home/View\Common\header.html"  on line 203 "&lt;!-- &lt;?php if(empty($_SESSION['user_name'])) {?&gt; --&gt;&lt;a id=&quot;login_link&quot; class=&quot;fancyLogin&quot; href=&quot;&quot;&gt;会员登入&lt;/a&gt;"  - Unexpected "?"
+
+[ 2016-08-01T18:24:55+08:00 ] ::1 /index.php/Home/presell/
+ERR: 无法加载控制器:Presell
+
+[ 2016-08-01T18:57:40+08:00 ] ::1 /
+ERR: Syntax Error in template "E:/demo/ugctest/Home/View\Common\header.html"  on line 38 "&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;{$sm arty.const.__ROOT__}/Public/js/LativJS.js&quot;&gt;&lt;/script&gt;"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2016-08-01T19:12:44+08:00 ] ::1 /index.php/Home/presell/
+ERR: 无法加载控制器:Presell
+
+[ 2016-08-01T19:20:12+08:00 ] ::1 /index.php/Home/presell/
+ERR: 无法加载控制器:Presell
+
+[ 2016-08-01T19:34:13+08:00 ] ::1 /index.php/Home/activities/
+ERR: 无法加载控制器:Activities
+
+[ 2016-08-01T19:41:35+08:00 ] ::1 /index.php/Home/presell/
+ERR: 无法加载控制器:Presell
+

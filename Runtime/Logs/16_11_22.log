@@ -1,0 +1,18 @@
+[ 2016-11-22T15:29:39+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/login
+ERR: Unknown database 'vk_unet_db'
+
+[ 2016-11-22T15:39:00+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/User/login
+ERR: Unknown database 'vk_unet_db'
+
+[ 2016-11-22T15:54:42+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 54 "opacity:0.6;"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2016-11-22T21:33:38+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/Index/becomeDesigner
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 514 "setTimeout( function(){user_center.style.display = &quot;none&quot;;},500 );"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2016-11-22T21:35:41+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/Index/becomeDesigner
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 514 "timer = setTimeout( function(){user_center.style.display = &quot;none&quot;;},500 );"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2016-11-22T21:37:30+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/index.php/Home/Index/becomeDesigner
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/Home/View\common\header.html"  on line 514 "timer = setTimeout( function(){user_center.style.display = &quot;none&quot;;},500 );"  - Unexpected ".", expected one of: "}" , " "
+
