@@ -142,6 +142,7 @@ class UserController extends Controller {
      * 0.tp框架集成的方法
      **/               
     public function verify(){
+        ob_clean();
         $config=array(
         'imageH'    =>  30,               
         'fontSize'  =>  12, 
