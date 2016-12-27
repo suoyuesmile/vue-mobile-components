@@ -106,6 +106,10 @@
 			height: 330px;
 			border: 1px solid rgba(204, 204, 204, 0.7);
 		} 
+		.sample_design img{
+			height: 330px;
+			width: 220px;
+		}
 		.sample_design .love_count{
 			display: none;
 			position: absolute;
@@ -201,22 +205,22 @@
 	{foreach $secondfloor as $key}	
 	<div class="secondfloor">
 		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href=""><img src="{$key[0]['design_show_img']}"></a>
+			<div class="love_count"></div>
+		</div>		<div class="sample_design">
+			<a href=""><img src="{$key[1]['design_show_img']}"></a>
 			<div class="love_count"></div>
 		</div>
 		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href=""><img src="{$key[2]['design_show_img']}"></a>
 			<div class="love_count"></div>
 		</div>
 		<div class="sample_design">
-			<a href=""><img src=""></a>
-			<div class="love_count"></div>
-		</div>
-		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href=""><img src="{$key[3]['design_show_img']}"></a>
 			<div class="love_count"></div>
 		</div>
 	</div>
 	{/foreach}
+
 </body>
 </html>
