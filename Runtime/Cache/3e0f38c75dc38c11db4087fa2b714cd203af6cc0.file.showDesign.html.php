@@ -1,29 +1,30 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-19 17:37:20
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-29 23:32:05
          compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html" */ ?>
-<?php /*%%SmartyHeaderCode:31825857aa5025fef8-84442398%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2417058652c757c16a4-59158300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3e0f38c75dc38c11db4087fa2b714cd203af6cc0' => 
     array (
       0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\Index\\showDesign.html',
-      1 => 1480085480,
+      1 => 1483020033,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '31825857aa5025fef8-84442398',
+  'nocache_hash' => '2417058652c757c16a4-59158300',
   'function' => 
   array (
   ),
   'variables' => 
   array (
     'secondfloor' => 0,
+    'key' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5857aa5035617',
+  'unifunc' => 'content_58652c75ce1c9',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5857aa5035617')) {function content_5857aa5035617($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_58652c75ce1c9')) {function content_58652c75ce1c9($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
   	<meta charset="utf-8">
@@ -131,6 +132,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			height: 330px;
 			border: 1px solid rgba(204, 204, 204, 0.7);
 		} 
+		.sample_design img{
+			height: 330px;
+			width: 220px;
+		}
 		.sample_design .love_count{
 			display: none;
 			position: absolute;
@@ -234,22 +239,43 @@ $_smarty_tpl->tpl_vars['key']->_loop = true;
 ?>	
 	<div class="secondfloor">
 		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[0]['id'];?>
+">
+				<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[0]['show_img'];?>
+">
+			</a>
+			<div class="love_count"></div>
+		</div>		
+		<div class="sample_design">
+			<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[1]['id'];?>
+">
+				<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[1]['show_img'];?>
+">
+			</a>
 			<div class="love_count"></div>
 		</div>
 		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[2]['id'];?>
+">
+				<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[2]['show_img'];?>
+">
+			</a>
 			<div class="love_count"></div>
 		</div>
 		<div class="sample_design">
-			<a href=""><img src=""></a>
-			<div class="love_count"></div>
-		</div>
-		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[3]['id'];?>
+">
+				<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[3]['show_img'];?>
+">
+			</a>
 			<div class="love_count"></div>
 		</div>
 	</div>
 	<?php } ?>
+
 </body>
 </html><?php }} ?>

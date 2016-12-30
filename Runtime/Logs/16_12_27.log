@@ -1,0 +1,9 @@
+[ 2016-12-27T16:18:35+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Index/showDesign
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html"  on line 208 "&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;{$smarty.const.DESIGN_IMG}&quot;+{secondfloor[0].design_show_img}&gt;&lt;/a&gt;"  - Unexpected "[", expected one of: "}" , " "
+
+[ 2016-12-27T16:20:09+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Index/showDesign
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html"  on line 208 "&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;{$smarty.const.DESIGN_IMG}{secondfloor[0].design_show_img}&quot;&gt;&lt;/a&gt;"  - Unexpected "[", expected one of: "}" , " "
+
+[ 2016-12-27T17:22:56+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Index/test
+ERR: Think\Model:findDessgn方法不存在！
+

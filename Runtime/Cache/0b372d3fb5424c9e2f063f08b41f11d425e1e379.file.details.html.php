@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-30 00:17:58
+         compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Common\details.html" */ ?>
+<?php /*%%SmartyHeaderCode:22843586517daa30c12-73991214%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0b372d3fb5424c9e2f063f08b41f11d425e1e379' => 
+    array (
+      0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\Common\\details.html',
+      1 => 1483028231,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '22843586517daa30c12-73991214',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_586517dac0357',
+  'variables' => 
+  array (
+    'detail' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_586517dac0357')) {function content_586517dac0357($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -80,7 +105,8 @@
 		.love{
 			height: 31px;
 			width: 40px;
-			background: url({$smarty.const.IMAGE_URL}love.png) no-repeat;
+			background: url(<?php echo @IMAGE_URL;?>
+love.png) no-repeat;
 		}
 		.love:hover,.want:hover,.shop:hover{
 			opacity: 1;
@@ -88,12 +114,14 @@
 		.want{
 			height: 31px;
 			width: 39px;
-			background: url({$smarty.const.IMAGE_URL}want.png) no-repeat;
+			background: url(<?php echo @IMAGE_URL;?>
+want.png) no-repeat;
 		}
 		.shop{
 			height: 32px;
 			width: 43px;
-			background: url({$smarty.const.IMAGE_URL}cart.png) no-repeat;
+			background: url(<?php echo @IMAGE_URL;?>
+cart.png) no-repeat;
 		}
 		.btm_word{
 			height: 20px;
@@ -147,17 +175,26 @@
 <div class="main">
 	<div class="firstfloor">
 		<div class="big_img">
-			<img src="{$detail[0]['big_url']}">
+			<img src="<?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['big_url'];?>
+">
 		</div>
 		<div class="design_detail">
-			<div class="design_name">{$detail[0]['name']}</div>
-			<div class="design_properties">作品编号：{$detail[0]['code']}</div>
-			<div class="design_properties">作品设计师：{$detail[0]['relname']}</div>
-			<div class="design_properties">风格：{$detail[0]['styname']}</div>
-			<div class="design_properties">分类：{$detail[0]['catname']}</div>
-			<div class="design_properties">喜欢：{$detail[0]['fans']}</div>
-			<div class="design_properties">想买：{$detail[0]['fans_order']}</div>
-			<div class="design_status">状态：{$detail[0]['status']}</div>
+			<div class="design_name"><?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['name'];?>
+</div>
+			<div class="design_properties">作品编号：<?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['code'];?>
+</div>
+			<div class="design_properties">作品设计师：<?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['relname'];?>
+</div>
+			<div class="design_properties">风格：<?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['styname'];?>
+</div>
+			<div class="design_properties">分类：<?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['catname'];?>
+</div>
+			<div class="design_properties">喜欢：<?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['fans'];?>
+</div>
+			<div class="design_properties">想买：<?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['fans_order'];?>
+</div>
+			<div class="design_status">状态：<?php echo $_smarty_tpl->tpl_vars['detail']->value[0]['status'];?>
+</div>
 			<div class="line_cross"></div>
 			<div class="attention">相关说明
 				<p> 当作品想买的人数达到一定的数量时，会有厂家联系
@@ -167,7 +204,8 @@
 			<div class="btm_click">
 				<div class="love" id="love"></div>
 				<div class="want" id="want"></div>
-				<a href="{$smarty.const.__MODULE__}/Index/zhiyiShop"><div class="shop" id="shop"></div></a>
+				<a href="<?php echo @__MODULE__;?>
+/Index/zhiyiShop"><div class="shop" id="shop"></div></a>
 			</div>
 			<div class="btm_word">
 				<span>喜欢</span>
@@ -183,4 +221,4 @@
 	</div>
 </div>
 </body>
-</html>
+</html><?php }} ?>

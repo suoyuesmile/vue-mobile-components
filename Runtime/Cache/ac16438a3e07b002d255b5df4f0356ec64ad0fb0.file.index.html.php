@@ -1,29 +1,30 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-19 17:37:14
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-29 22:04:04
          compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:103525857aa4a8ca986-19651694%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20770586517d45075c6-88683701%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ac16438a3e07b002d255b5df4f0356ec64ad0fb0' => 
     array (
       0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\Index\\index.html',
-      1 => 1480089074,
+      1 => 1483020080,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '103525857aa4a8ca986-19651694',
+  'nocache_hash' => '20770586517d45075c6-88683701',
   'function' => 
   array (
   ),
   'variables' => 
   array (
     'secondfloor' => 0,
+    'key' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5857aa4a9f00c',
+  'unifunc' => 'content_586517d4a1716',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5857aa4a9f00c')) {function content_5857aa4a9f00c($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_586517d4a1716')) {function content_586517d4a1716($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
   	<meta charset="utf-8">
@@ -177,6 +178,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			height: 328px;
 			border-left: 1px solid rgba(204, 204, 204, 0.7);
 		}
+		.design_sample img{
+			width: 220px;
+			height:330px;
+		}
 		.design_sample .love_count{
 			display: none;
 			position: absolute;
@@ -316,23 +321,39 @@ $_smarty_tpl->tpl_vars['key']->_loop = true;
 				<div class="float_title"></div>
 			</div>
 			<div class="design_sample" >
-				<!-- <a href=""><img src="<?php echo @IMAGE_URL;?>
-clothesimage/105.jpg"></a> -->
+				<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[0]['id'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[0]['show_img'];?>
+">
+				</a> 
 				<div class="love_count"></div>
 			</div>
 			<div class="design_sample">
-				<!-- <a href=""><img src="<?php echo @IMAGE_URL;?>
-clothesimage/106.jpg"></a> -->
+				<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[1]['id'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[1]['show_img'];?>
+">
+					</a> 
 				<div class="love_count"></div>
 			</div>	
 			<div class="design_sample">
-				<!-- <a href=""><img src="<?php echo @IMAGE_URL;?>
-clothesimage/107.jpg"></a> -->
+				<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[2]['id'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[2]['show_img'];?>
+">
+				</a> 
 				<div class="love_count"></div>
 			</div>
 			<div class="design_sample">
-				<!-- <a href=""><img src="<?php echo @IMAGE_URL;?>
-clothesimage/108.jpg"></a> -->
+				<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[3]['id'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[3]['show_img'];?>
+">
+				</a> 
 				<div class="love_count"></div>
 			</div>
 		</div>							

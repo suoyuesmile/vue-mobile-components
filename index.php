@@ -28,7 +28,7 @@ define("WEB_ROOT","http://localhost/zxyClothesPlatform/zxy1.02/zxyclothpat/");
 define("CSS_URL",WEB_ROOT."Public/Home/css/");
 define("IMAGE_URL",WEB_ROOT."Public/Home/images/");
 define("JS_URL",WEB_ROOT."Public/Home/js/");
-define("DESIGN_IMG",WEB_ROOT."Clothesimage/");
+define("DESIGN_IMG",WEB_ROOT."Clothesimages/");
 // 引入ThinkPHP入口文件
 require './System/ThinkPHP/ThinkPHP.php';
 

@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-19 17:37:36
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-30 00:11:26
          compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\zhiyiShop.html" */ ?>
-<?php /*%%SmartyHeaderCode:79115857aa60a16d24-96664262%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:32421586535aea1df53-38898125%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '79115857aa60a16d24-96664262',
+  'nocache_hash' => '32421586535aea1df53-38898125',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5857aa60a502a',
+  'unifunc' => 'content_586535aeaa9b7',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5857aa60a502a')) {function content_5857aa60a502a($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_586535aeaa9b7')) {function content_586535aeaa9b7($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">

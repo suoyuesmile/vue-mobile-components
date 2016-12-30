@@ -13,11 +13,11 @@ class IndexModel extends Model{
 	function getItems(){
 		$design = M("design");
         //获取主页划分的第一部分的图片
-        $result1 = $design->where('design_devide=1')->order('design_hot desc')->field('design_id,design_show_img')->select();
+        $result1 = $design->where('devide=1')->order('hot desc')->field('id,show_img')->select();
        
-        $result2 = $design->where('design_devide=2')->order('design_hot desc')->field('design_id,design_show_img')->select();
+        $result2 = $design->where('devide=2')->order('hot desc')->field('id,show_img')->select();
 
-        $result3 = $design->where('design_devide=3')->order('design_hot desc')->field('design_id,design_show_img')->select();
+        $result3 = $design->where('devide=3')->order('hot desc')->field('id,show_img')->select();
 
         // show_bug($devideResult);
         //拼装3个单元元素的数组
@@ -26,7 +26,7 @@ class IndexModel extends Model{
         	for($i=0; $i<4; $i++){
      
         		// echo DESIGN_IMG.$value[$i]['design_show_img'];
-             	$result[$key][$i]['design_show_img'] = DESIGN_IMG.$value[$i]['design_show_img'];
+             	$result[$key][$i]['show_img'] = DESIGN_IMG.$value[$i]['show_img'];
         	}
         }
         // show_bug($result);
@@ -44,7 +44,7 @@ class IndexModel extends Model{
 	function findDesign(){
 		$design = M("design");
         //获取所有元素
-        $result = $design->where('design_id>=0')->field('design_id,design_show_img')->select();
+        $result = $design->where('id>=0')->field('id,show_img')->select();
         //将元素组分隔四分组成新的数组
         $devideResult = array_chunk ($result, 4);
 
@@ -53,7 +53,7 @@ class IndexModel extends Model{
         	for($i=0;$i<4;$i++){
      
         		// echo DESIGN_IMG.$value[$i]['design_show_img'];
-             	$devideResult[$key][$i]['design_show_img'] = DESIGN_IMG.$value[$i]['design_show_img'];
+             	$devideResult[$key][$i]['show_img'] = DESIGN_IMG.$value[$i]['show_img'];
         	}
         }
         

@@ -10,7 +10,26 @@ class CommonController extends Controller {
 		$this->display();
 	}
 	function commands(){}
-	function designs(){}
-	function details(){}
+	function designs(){	
+	}
+	function details(){
+		$user_name = session('user_name');
+        $this->assign('user_name',$user_name);
+        $designId = $_GET['id'];
+        $index = 6;
+        $title = '作品详情';
+        $item = new \Home\Model\CommonModel(); 
+        $result = $item->findDetails($designId);
+        $this->assign('detail',$result);
+        $this->assign('index',$index);
+        $this->assign('title',$title);
+      	$this->display('header'); 
+      	$this->display();
+      	$this->display('bottom2');
+      }
 	function activities(){}
+	function test(){
+		$item = new \Home\Model\CommonModel(); 
+        $result = $item->findDetails();
+	}
 }
