@@ -18,6 +18,13 @@ class IndexController extends Controller {
         $title = '织心衣';
         $item = new \Home\Model\IndexModel(); 
         $result = $item->getItems();
+        $midCate = new \Home\Model\CommonModel(); 
+        $resMid = $midCate->findStyTag();
+        $designCate = array_slice($resMid, 0, 5);
+        $moreCate = array_slice($resMid, 5);
+        $devideCate = array_chunk($moreCate, 4);
+        $this->assign('designCate',$designCate);
+        $this->assign('devideCate',$devideCate);
         $this->assign('secondfloor',$result);
         $this->assign('index',$index);
         $this->assign('title',$title);
@@ -133,8 +140,8 @@ class IndexController extends Controller {
         // }
 
         // show_bug($devideResult);
-        $item = new \Home\Model\IndexModel(); 
-        $result = $item->getItems();
+        $item = new \Home\Model\CommonModel(); 
+        $result = $item->findStyTag();
         // show_bug($result);
         // show_bug($result);
     }

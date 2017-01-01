@@ -12,6 +12,7 @@
 		font-family: "arial";
 		font-size: 16px;
 		text-align: center;
+		cursor:default;
 		}
 
 		/*****************************************************************************************
@@ -51,6 +52,11 @@
 			float: left;
 			display: block;
 			color: #fe008d;
+			/*cursor:pointer;*/
+		}
+		.top .logined_status .login_username a{
+			color: #fe008d;
+			text-decoration: none;
 		}
 		/*下拉按钮*/
 		.top .logined_status .dropmeun_button{
@@ -332,6 +338,7 @@
 			height: 30px;
 			width: 70px;
 			opacity: 0.5;
+			cursor:pointer;
 		}
 		.reflash:hover{
 			opacity: 1;
@@ -357,6 +364,7 @@
 			background: 000px;
 			border-radius: 6px;
 			border: 1px solid rgba(204, 204, 204, 0.7);
+			cursor:pointer;
 		}
 		.login_btn:hover{
 			color: #FE008D;
@@ -371,6 +379,7 @@
 			background: 000px;
 			border-radius: 6px;
 			border: 1px solid rgba(204, 204, 204, 0.7);
+			cursor:pointer;
 		}
 		.register_btn:hover{
 			color: #FE008D;
@@ -416,6 +425,7 @@
 			font-family: "微软雅黑";
 			color: #03a9f4;
 			opacity: 0.5;
+			cursor:pointer;
 		}
 		#turn_register:hover{
 			opacity: 1;
@@ -426,6 +436,7 @@
 			font-family: "微软雅黑";
 			color: #03a9f4;
 			opacity: 0.5;
+			cursor:pointer;
 		}
 		#turn_login:hover{
 			opacity: 1;
@@ -641,7 +652,7 @@
 		<div class="register_button" id="register_button"><a href="#">免费注册</a></div>		
 	</div>
 	<div class="logined_status" style="display: block;">
-	    <div class="login_username" id="login_username">{$user_name}</div>
+	    <div class="login_username" id="login_username"><a href="{$smarty.const.__MODULE__}/User/userCenter">{$user_name}</a></div>
 	    <div class="dropmeun_button" id="dropmeun_button">
 	    <!-- 隐藏层-下拉用户中心框 -->
 	    <!-- 包含1个头像，四个用户功能标签，分别指向4个页面 -->

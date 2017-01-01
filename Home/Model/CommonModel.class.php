@@ -23,4 +23,16 @@ class CommonModel extends Model{
 		// show_bug($result);
 		return $result;
 	}
+
+	function findStyTag(){
+		$style = M('style');
+		$result = $style->field('styname')->table('zxy_design_cate_style')->select();
+		// show_bug($result);
+		return $result;
+	}
+	function findCatTag(){
+		$cate = M('cate');
+		$result = $cate->field('catname')->table('zxy_design_category')->select();
+		return $result;
+	}
 }

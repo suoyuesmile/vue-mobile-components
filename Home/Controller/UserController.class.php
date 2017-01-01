@@ -18,7 +18,7 @@ class UserController extends Controller {
         $this->assign('index',$index);
         $this->display('Common:header');
     	$this->display();
-    	$this->display('Common:bottom');
+    	$this->display('Common:bottom2');
     }
     function myDesign(){
         $user_name = session('user_name');
@@ -36,12 +36,12 @@ class UserController extends Controller {
         $this->assign('title',$title);
         $this->display('Common:header');
     	$this->display();
-    	$this->display('Common:bottom');
+    	$this->display('Common:bottom2');
     }
     function updateUserinfo(){
         $this->display('Common:header');
     	$this->display();
-    	$this->display('Common:bottom');
+    	$this->display('Common:bottom2');
     }
     function accountCenter(){
         $user_name = session('user_name');
@@ -50,7 +50,7 @@ class UserController extends Controller {
         $this->assign('index',$index);
         $this->display('Common:header');
     	$this->display();
-    	$this->display('Common:bottom');
+    	$this->display('Common:bottom2');
     }
     function myCircle(){
         $user_name = session('user_name');
@@ -59,7 +59,7 @@ class UserController extends Controller {
         $this->assign('index',$index);
         $this->display('Common:header');
         $this->display();
-        $this->display('Common:bottom');
+        $this->display('Common:bottom2');
     }
     function uploadDesign(){
         $user_name = session('user_name');
@@ -68,7 +68,7 @@ class UserController extends Controller {
         $this->assign('index',$index);
         $this->display('Common:header');
         $this->display();
-        $this->display('Common:bottom');  
+        $this->display('Common:bottom2');  
              
     }
     /**

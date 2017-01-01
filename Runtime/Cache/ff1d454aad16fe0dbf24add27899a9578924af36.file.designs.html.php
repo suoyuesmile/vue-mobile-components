@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-31 21:13:19
+         compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Common\designs.html" */ ?>
+<?php /*%%SmartyHeaderCode:288365865ff3d5347d4-45527868%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'ff1d454aad16fe0dbf24add27899a9578924af36' => 
+    array (
+      0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\Common\\designs.html',
+      1 => 1483189996,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '288365865ff3d5347d4-45527868',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5865ff3d57ea8',
+  'variables' => 
+  array (
+    'topTag' => 0,
+    'key' => 0,
+    'midTag' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5865ff3d57ea8')) {function content_5865ff3d57ea8($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
 	<style type="text/css">
@@ -71,7 +98,8 @@
 		.hot_tag .tag_title img,.midfloor img{
 			height: 32px;
 			width: 32px;
-			/*background: url({$smarty.const.IMAGE_URL}hot_tag1.png) no-repeat;*/
+			/*background: url(<?php echo @IMAGE_URL;?>
+hot_tag1.png) no-repeat;*/
 		}
 		.tag_tips{
 			margin-left:15px; 
@@ -135,7 +163,8 @@
 			height: 30px;
 			width: 30px;
 			opacity: 0.3;
-			background:url({$smarty.const.IMAGE_URL}zan2.png) no-repeat;
+			background:url(<?php echo @IMAGE_URL;?>
+zan2.png) no-repeat;
 		}
 		.sample_design:hover{
 			box-shadow: 2px 2px 15px rgba(204, 204, 204, 0.35);	
@@ -144,11 +173,13 @@
 			display: block;
 		}
 		.love_count:hover{
-			background:url({$smarty.const.IMAGE_URL}zan.png) no-repeat;
+			background:url(<?php echo @IMAGE_URL;?>
+zan.png) no-repeat;
 		}
 
 	</style>
-	<script type="text/javascript" src="{$smarty.const.JS_URL}ajax.js"></script>
+	<script type="text/javascript" src="<?php echo @JS_URL;?>
+ajax.js"></script>
 	<script type="text/javascript">
 		window.onload = function(){
 			var oMid_tag = document.getElementById("mid_tag");
@@ -177,32 +208,46 @@
 		<div class="page_tag">服装分类</div>
 		<div class="tag_list">
 			<ul id="nav_tag">			
-				<li><a href="{$smarty.const.__MODULE__}/Index/index">首页</a></li>
-				<li><a href="{$smarty.const.__MODULE__}/Index/showDesign">全部作品</a></li>
-				{foreach $topTag as $key}
-				<li><a href="">{$key['styname']}</a></li>
-				{/foreach}
+				<li><a href="<?php echo @__MODULE__;?>
+/Index/index">首页</a></li>
+				<li><a href="<?php echo @__MODULE__;?>
+/Index/showDesign">全部作品</a></li>
+				<?php  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['key']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['topTag']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->key => $_smarty_tpl->tpl_vars['key']->value){
+$_smarty_tpl->tpl_vars['key']->_loop = true;
+?>
+				<li><a href=""><?php echo $_smarty_tpl->tpl_vars['key']->value['styname'];?>
+</a></li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>
 </div>
 <div class="hot_tag">
 	<div class="tag_title">
-		<img src="{$smarty.const.IMAGE_URL}hot_tag.png"> </span>
+		<img src="<?php echo @IMAGE_URL;?>
+hot_tag.png"> </span>
 		<span>热门标签</span>
 		<span class="tag_tips">点击即可查看分类标签的相关内容</span>
 	</div>
 	<div class="tag_name">
 		<ul id="mid_tag">
-			{foreach $midTag as $key}
-			<li><span>{$key['styname']}</span></li>
-			{/foreach}
+			<?php  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['key']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['midTag']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->key => $_smarty_tpl->tpl_vars['key']->value){
+$_smarty_tpl->tpl_vars['key']->_loop = true;
+?>
+			<li><span><?php echo $_smarty_tpl->tpl_vars['key']->value['styname'];?>
+</span></li>
+			<?php } ?>
 		</ul>
 	</div>
 </div>
 <div class="midfloor">
 	<div class="tag_title">
-		<img src="{$smarty.const.IMAGE_URL}show_design.png"> </span>
+		<img src="<?php echo @IMAGE_URL;?>
+show_design.png"> </span>
 		<span>作品展示</span>
 		<span class="tag_tips">清新学生</span>
 	</div>
@@ -235,3 +280,4 @@
 </div>
 </body>
 </html>
+<?php }} ?>

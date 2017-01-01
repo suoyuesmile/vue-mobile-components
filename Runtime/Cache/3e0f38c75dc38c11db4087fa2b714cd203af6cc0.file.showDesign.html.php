@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-29 23:32:05
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-31 23:06:41
          compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html" */ ?>
 <?php /*%%SmartyHeaderCode:2417058652c757c16a4-59158300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3e0f38c75dc38c11db4087fa2b714cd203af6cc0' => 
     array (
       0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\Index\\showDesign.html',
-      1 => 1483020033,
+      1 => 1483196798,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58652c75ce1c9',
   'variables' => 
   array (
     'secondfloor' => 0,
     'key' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58652c75ce1c9',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58652c75ce1c9')) {function content_58652c75ce1c9($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -88,16 +88,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			/*padding-top: 2px;*/
 		}
 		.morecata div{
-			width: 610px;
+			width: 910px;
 			height: 50px;
 			background: white;
 		}
 		.morecata div a{
 			display: inline-block;
 			line-height: 50px;
-			width: 150px;
-		}
-		.morecata div a{
+			width: 130px;
 			font-size: 14px;
 			color:  #000;
 			opacity: 0.6;
@@ -212,19 +210,103 @@ zan.png) no-repeat;
  	<!-- 包含三个部分，左边的二级导航，中间最热商品轮播图，右边设计师的rank榜 -->
  	<div class="firstfloor">
 		<div class="subnav" id="subnav">
-			<li><a href="">上衣</a></li>
-			<li><a href="">裤子</a></li>
-			<li><a href="">裙子</a></li>
-			<li><a href="">鞋子</a></li>
-			<li><a href="">套装</a></li>
-			<li><a href="">查看更多分类</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">上衣</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">裤子</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">裙子</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">鞋子</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">套装</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">查看更多分类</a></li>
 			<div class="morecata" id="morecata">
-				<div><a href="">衬衫</a><a href="">T恤</a><a href="">外套</a><a href="">打底衫</a></div>
-				<div><a href="">牛仔</a><a href="">休闲裤</a><a href="">短裤</a><a href="">7分裤</a></div>
-				<div><a href="">连衣裙</a><a href="">半身裙</a><a href="">百褶裙</a><a href="">超短裙</a></div>
-				<div><a href="">跑鞋</a><a href="">马克鞋</a><a href="">休闲鞋</a><a href="">皮鞋</a></div>
-				<div><a href="">西装</a><a href="">休闲装</a><a href="">运动装</a><a href="">田园装</a></div>
-				<div><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a></div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">衬衫</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">T恤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">外套</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">打底衫</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">打底衫</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">打底衫</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">牛仔</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">休闲裤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">短裤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">7分裤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">7分裤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">7分裤</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">连衣裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">半身裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">百褶裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">超短裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">超短裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">超短裙</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">跑鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">马克鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">休闲鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">皮鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">皮鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">皮鞋</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">西装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">休闲装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">运动装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">田园装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">田园装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">田园装</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+				</div>
 		    </div>
 		</div>
 		<div class="hotshow">

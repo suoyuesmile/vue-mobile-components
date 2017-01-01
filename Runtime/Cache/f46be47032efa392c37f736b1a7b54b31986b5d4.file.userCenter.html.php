@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-31 23:16:14
+         compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\User\userCenter.html" */ ?>
+<?php /*%%SmartyHeaderCode:18795867cb6ea05145-17057163%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'f46be47032efa392c37f736b1a7b54b31986b5d4' => 
+    array (
+      0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\User\\userCenter.html',
+      1 => 1483197371,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '18795867cb6ea05145-17057163',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5867cb6ebbc9c',
+  'variables' => 
+  array (
+    'user_name' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5867cb6ebbc9c')) {function content_5867cb6ebbc9c($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
 	<style type="text/css">
@@ -133,7 +158,8 @@
 	<div class="firstfloor">
 		<div class="user_base_info">
 			<div class="user_avata"></div>
-			<div class="nick_name">{$user_name}</div>
+			<div class="nick_name"><?php echo $_smarty_tpl->tpl_vars['user_name']->value;?>
+</div>
 			<div class="user_cross_line2"></div>
 			<div class="user_degree">认证：<span class="user_degree_txt">初级设计师</span></div>
 			<div class="focus_count">关注度：<span class="focus_count_txt">100</span></div>
@@ -144,7 +170,8 @@
 			<div class="personal_mail">绑定邮箱:<span><a href="">yue2xy@163.com</a></span></div>
 			<div class="personal_phone">手机号码:<span><a href="">13164602219</a></span></div>		
 			<div class="update_detail">修改资料</div>
-			<div class="update_password"><a href="{$smarty.const.__MODULE__}/User/accountCenter">修改密码</a></div>
+			<div class="update_password"><a href="<?php echo @__MODULE__;?>
+/User/accountCenter">修改密码</a></div>
 		</div>
 	</div>
 	<div class="secondfloor"></div>
@@ -152,4 +179,4 @@
 </div>
 
 </body>
-</html>
+</html><?php }} ?>
