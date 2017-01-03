@@ -1,0 +1,6 @@
+[ 2016-12-31T12:49:30+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Index/test
+ERR: Think\Model:filed方法不存在！
+
+[ 2016-12-31T23:18:46+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/User/userCenter
+ERR: 模板不存在:E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View/Common/bottom1.html
+

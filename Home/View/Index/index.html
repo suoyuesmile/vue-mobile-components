@@ -72,9 +72,7 @@
 		.morecata div a{
 			display: inline-block;
 			line-height: 50px;
-			width: 150px;
-		}
-		.morecata div a{
+			width: 125px;
 			font-size: 14px;
 			color:  #000;
 			opacity: 0.6;
@@ -152,6 +150,22 @@
 			height: 328px;
 			border-left: 1px solid rgba(204, 204, 204, 0.7);
 		}
+		/*.fine_design .design_sample img{
+			width: 220px;
+			height: 328px;
+		}*/
+		.design_sample a img{
+			width: 220px;
+			height:330px;
+		}
+		.design_sample .honor{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 32px;
+			height: 32px;
+			opacity: 0.5;
+		}
 		.design_sample .love_count{
 			display: none;
 			position: absolute;
@@ -171,10 +185,7 @@
 		.love_count:hover{
 			background:url({$smarty.const.IMAGE_URL}zan.png) no-repeat;
 		}
-		.fine_design .design_sample img{
-			width: 220px;
-			height: 328px;
-		}
+		
 
 
 	</style>
@@ -243,19 +254,19 @@
  	<!-- 包含3部分，左边的二级导航，中间最热商品轮播图，右边设计师的rank榜 -->
  	<div class="firstfloor">
 		<div class="subnav" id="subnav">
-			<li><a href="">清新学生</a></li>
-			<li><a href="">花样少年</a></li>
-			<li><a href="">商务白领</a></li>
-			<li><a href="">魅丽女士</a></li>
-			<li><a href="">成熟男士</a></li>
-			<li><a href="">查看更多分类</a></li>
+			{foreach $designCate as $key}
+			<li><a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key['styname']}</a></li>
+			{/foreach}
+			<li><a>查看更多分类</a></li>
 			<div class="morecata" id="morecata">
-				<div><a href="">正装学生</a><a href="">欧美学院</a><a href="">休闲学弟</a><a href="">清纯学妹</a></div>
-				<div><a href="">小正太</a><a href="">个性帅哥</a><a href="">高傲男神</a><a href="">冷傲少女</a></div>
-				<div><a href="">初入职场</a><a href="">小有名气</a><a href="">职场达人</a><a href="">老总服饰</a></div>
-				<div><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a></div>
-				<div><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a></div>
-				<div><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a></div>
+				{foreach $devideCate as $key}
+				<div>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[0]['styname']}</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[1]['styname']}</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[2]['styname']}</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[3]['styname']}</a>
+				</div>
+				{/foreach}
 		    </div>
 		</div>
 		<div class="hotshow">
@@ -280,19 +291,31 @@
 				<div class="float_title"></div>
 			</div>
 			<div class="design_sample" >
-				<!-- <a href=""><img src="{$smarty.const.IMAGE_URL}clothesimage/105.jpg"></a> -->
+				<a href="{$smarty.const.__MODULE__}/Common/details?id={$key[0]['id']}">
+					<img src="{$key[0]['show_img']}">
+				</a>
+				<!-- <img class="honor" src="{$smarty.const.IMAGE_URL}honor.png">  -->
 				<div class="love_count"></div>
 			</div>
 			<div class="design_sample">
-				<!-- <a href=""><img src="{$smarty.const.IMAGE_URL}clothesimage/106.jpg"></a> -->
+				<a href="{$smarty.const.__MODULE__}/Common/details?id={$key[1]['id']}">
+					<img src="{$key[1]['show_img']}">
+				</a> 
+				<!-- <img class="honor" src="{$smarty.const.IMAGE_URL}honor2.png">  -->
 				<div class="love_count"></div>
 			</div>	
 			<div class="design_sample">
-				<!-- <a href=""><img src="{$smarty.const.IMAGE_URL}clothesimage/107.jpg"></a> -->
+				<a href="{$smarty.const.__MODULE__}/Common/details?id={$key[2]['id']}">
+					<img src="{$key[2]['show_img']}">
+				</a> 
+				<!-- <img class="honor" src="{$smarty.const.IMAGE_URL}honor3.png">  -->
 				<div class="love_count"></div>
 			</div>
 			<div class="design_sample">
-				<!-- <a href=""><img src="{$smarty.const.IMAGE_URL}clothesimage/108.jpg"></a> -->
+				<a href="{$smarty.const.__MODULE__}/Common/details?id={$key[3]['id']}">
+					<img src="{$key[3]['show_img']}">
+				</a> 
+				<!-- <img class="honor" src="{$smarty.const.IMAGE_URL}honor4.png">  -->
 				<div class="love_count"></div>
 			</div>
 		</div>							

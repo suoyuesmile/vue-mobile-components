@@ -1,29 +1,32 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-19 17:37:20
+<?php /* Smarty version Smarty-3.1.6, created on 2017-01-03 13:40:37
          compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html" */ ?>
-<?php /*%%SmartyHeaderCode:31825857aa5025fef8-84442398%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2417058652c757c16a4-59158300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3e0f38c75dc38c11db4087fa2b714cd203af6cc0' => 
     array (
       0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\Index\\showDesign.html',
-      1 => 1480085480,
+      1 => 1483422034,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '31825857aa5025fef8-84442398',
+  'nocache_hash' => '2417058652c757c16a4-59158300',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58652c75ce1c9',
   'variables' => 
   array (
+    'designCate' => 0,
+    'key' => 0,
+    'devideCate' => 0,
     'secondfloor' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5857aa5035617',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5857aa5035617')) {function content_5857aa5035617($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_58652c75ce1c9')) {function content_58652c75ce1c9($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
   	<meta charset="utf-8">
@@ -87,16 +90,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			/*padding-top: 2px;*/
 		}
 		.morecata div{
-			width: 610px;
+			width: 910px;
 			height: 50px;
 			background: white;
 		}
 		.morecata div a{
 			display: inline-block;
 			line-height: 50px;
-			width: 150px;
-		}
-		.morecata div a{
+			width: 130px;
 			font-size: 14px;
 			color:  #000;
 			opacity: 0.6;
@@ -131,6 +132,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			height: 330px;
 			border: 1px solid rgba(204, 204, 204, 0.7);
 		} 
+		.sample_design img{
+			height: 330px;
+			width: 220px;
+		}
 		.sample_design .love_count{
 			display: none;
 			position: absolute;
@@ -207,19 +212,114 @@ zan.png) no-repeat;
  	<!-- 包含三个部分，左边的二级导航，中间最热商品轮播图，右边设计师的rank榜 -->
  	<div class="firstfloor">
 		<div class="subnav" id="subnav">
-			<li><a href="">上衣</a></li>
-			<li><a href="">裤子</a></li>
-			<li><a href="">裙子</a></li>
-			<li><a href="">鞋子</a></li>
-			<li><a href="">套装</a></li>
-			<li><a href="">查看更多分类</a></li>
+			<?php  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['key']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['designCate']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->key => $_smarty_tpl->tpl_vars['key']->value){
+$_smarty_tpl->tpl_vars['key']->_loop = true;
+?>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value['catname'];?>
+</a></li>
+			<?php } ?>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">查看更多分类</a></li>
 			<div class="morecata" id="morecata">
-				<div><a href="">衬衫</a><a href="">T恤</a><a href="">外套</a><a href="">打底衫</a></div>
-				<div><a href="">牛仔</a><a href="">休闲裤</a><a href="">短裤</a><a href="">7分裤</a></div>
-				<div><a href="">连衣裙</a><a href="">半身裙</a><a href="">百褶裙</a><a href="">超短裙</a></div>
-				<div><a href="">跑鞋</a><a href="">马克鞋</a><a href="">休闲鞋</a><a href="">皮鞋</a></div>
-				<div><a href="">西装</a><a href="">休闲装</a><a href="">运动装</a><a href="">田园装</a></div>
-				<div><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a></div>
+				<?php  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['key']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['devideCate']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->key => $_smarty_tpl->tpl_vars['key']->value){
+$_smarty_tpl->tpl_vars['key']->_loop = true;
+?>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[0]['catname'];?>
+</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[1]['catname'];?>
+</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[2]['catname'];?>
+</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[3]['catname'];?>
+</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[4]['catname'];?>
+</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[5]['catname'];?>
+</a>
+				</div>
+				<?php } ?>
+				<!-- <div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">牛仔</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">休闲裤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">短裤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">7分裤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">7分裤</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">7分裤</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">连衣裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">半身裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">百褶裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">超短裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">超短裙</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">超短裙</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">跑鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">马克鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">休闲鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">皮鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">皮鞋</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">皮鞋</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">西装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">休闲装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">运动装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">田园装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">田园装</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">田园装</a>
+				</div>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1">花样少年</a>
+				</div> -->
 		    </div>
 		</div>
 		<div class="hotshow">
@@ -234,22 +334,43 @@ $_smarty_tpl->tpl_vars['key']->_loop = true;
 ?>	
 	<div class="secondfloor">
 		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[0]['id'];?>
+">
+				<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[0]['show_img'];?>
+">
+			</a>
+			<div class="love_count"></div>
+		</div>		
+		<div class="sample_design">
+			<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[1]['id'];?>
+">
+				<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[1]['show_img'];?>
+">
+			</a>
 			<div class="love_count"></div>
 		</div>
 		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[2]['id'];?>
+">
+				<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[2]['show_img'];?>
+">
+			</a>
 			<div class="love_count"></div>
 		</div>
 		<div class="sample_design">
-			<a href=""><img src=""></a>
-			<div class="love_count"></div>
-		</div>
-		<div class="sample_design">
-			<a href=""><img src=""></a>
+			<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[3]['id'];?>
+">
+				<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[3]['show_img'];?>
+">
+			</a>
 			<div class="love_count"></div>
 		</div>
 	</div>
 	<?php } ?>
+
 </body>
 </html><?php }} ?>

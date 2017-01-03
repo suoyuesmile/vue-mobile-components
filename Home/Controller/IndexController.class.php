@@ -16,12 +16,16 @@ class IndexController extends Controller {
         $this->assign('user_name',$user_name);
         $index = 0;
         $title = '织心衣';
-        $secondfloor = array(
-            'fisrt'     =>  array('name' => 'one'),
-            'second'    =>  array('name' => 'two'),
-            'third'     =>  array('name' => 'three')
-            );
-        $this->assign('secondfloor',$secondfloor);
+        $item = new \Home\Model\IndexModel(); 
+        $result = $item->getItems();
+        $midCate = new \Home\Model\CommonModel(); 
+        $resMid = $midCate->findStyTag();
+        $designCate = array_slice($resMid, 0, 5);
+        $moreCate = array_slice($resMid, 5);
+        $devideCate = array_chunk($moreCate, 4);
+        $this->assign('designCate',$designCate);
+        $this->assign('devideCate',$devideCate);
+        $this->assign('secondfloor',$result);
         $this->assign('index',$index);
         $this->assign('title',$title);
       	$this->display('common:header'); 
@@ -34,15 +38,16 @@ class IndexController extends Controller {
         $this->assign('user_name',$user_name);
         $index = 1;
         $title = '全部作品';
-        $secondfloor = array(
-            'fisrt'     =>  array('name' => 'one'),
-            'second'    =>  array('name' => 'two'),
-            'third'     =>  array('name' => 'three'),
-            'forth'     =>  array('name' => 'one'),
-            'fifth'    =>  array('name' => 'two'),
-            'sexth'     =>  array('name' => 'three')
-            );
-        $this->assign('secondfloor',$secondfloor);
+        $midCate = new \Home\Model\CommonModel(); 
+        $resMid = $midCate->findCatTag();
+        $designCate = array_slice($resMid, 0, 5);
+        $moreCate = array_slice($resMid, 5);
+        $devideCate = array_chunk($moreCate, 6);
+        $this->assign('designCate',$designCate);
+        $this->assign('devideCate',$devideCate);
+        $item = new \Home\Model\IndexModel(); 
+        $result = $item->findDesign();
+        $this->assign('secondfloor',$result);
         $this->assign('index',$index);
         $this->assign('title',$title);
       	$this->display('common:header');
@@ -128,5 +133,23 @@ class IndexController extends Controller {
         $this->display('common:header');
         $this->display();
         $this->display('common:bottom');
+    }
+    public function test(){
+        // $design = M("design");
+        // //获取所有元素
+        // $result = $design->where('design_id>=0')->field('design_id,design_show_img')->select();
+        // //将元素组分隔四分组成新的数组
+        // $devideResult = array_chunk ($result, 4);
+
+        // show_bug($devideResult);
+        // for($i=0;$i<4;$i++){
+        //     $devideResult[0][$i]['design_show_img'] = DESIGN_IMG.$devideResult[0][$i]['design_show_img'];
+        // }
+
+        // show_bug($devideResult);
+        $item = new \Home\Model\CommonModel(); 
+        $result = $item->findCatTag();
+        // show_bug($result);
+        // show_bug($result);
     }
 }

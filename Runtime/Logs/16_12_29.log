@@ -1,0 +1,15 @@
+[ 2016-12-29T20:46:12+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Common/test
+ERR: Think\Model:filed方法不存在！
+
+[ 2016-12-29T20:54:22+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Common/test
+ERR: Think\Model:filed方法不存在！
+
+[ 2016-12-29T23:27:20+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Common/details?id=4
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Common\details.html"  on line 160 "&lt;img src=&quot;{detail[0]['big_img']}&quot;&gt;"  - Unexpected "[", expected one of: "}" , " "
+
+[ 2016-12-29T23:27:52+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Common/details?id=4
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Common\details.html"  on line 160 "&lt;img src=&quot;{detail[0]['big_img']}&quot;&gt;"  - Unexpected "[", expected one of: "}" , " "
+
+[ 2016-12-29T23:28:21+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Common/details?id=4
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Common\details.html"  on line 160 "&lt;img src=&quot;{detail[0]['big_url']}&quot;&gt;"  - Unexpected "[", expected one of: "}" , " "
+

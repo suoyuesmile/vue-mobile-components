@@ -1,29 +1,32 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-19 17:37:14
+<?php /* Smarty version Smarty-3.1.6, created on 2017-01-01 16:08:32
          compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:103525857aa4a8ca986-19651694%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20770586517d45075c6-88683701%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ac16438a3e07b002d255b5df4f0356ec64ad0fb0' => 
     array (
       0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\Index\\index.html',
-      1 => 1480089074,
+      1 => 1483258093,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '103525857aa4a8ca986-19651694',
+  'nocache_hash' => '20770586517d45075c6-88683701',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_586517d4a1716',
   'variables' => 
   array (
+    'designCate' => 0,
+    'key' => 0,
+    'devideCate' => 0,
     'secondfloor' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5857aa4a9f00c',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5857aa4a9f00c')) {function content_5857aa4a9f00c($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_586517d4a1716')) {function content_586517d4a1716($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
   	<meta charset="utf-8">
@@ -97,9 +100,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		.morecata div a{
 			display: inline-block;
 			line-height: 50px;
-			width: 150px;
-		}
-		.morecata div a{
+			width: 125px;
 			font-size: 14px;
 			color:  #000;
 			opacity: 0.6;
@@ -177,6 +178,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			height: 328px;
 			border-left: 1px solid rgba(204, 204, 204, 0.7);
 		}
+		/*.fine_design .design_sample img{
+			width: 220px;
+			height: 328px;
+		}*/
+		.design_sample a img{
+			width: 220px;
+			height:330px;
+		}
+		.design_sample .honor{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 32px;
+			height: 32px;
+			opacity: 0.5;
+		}
 		.design_sample .love_count{
 			display: none;
 			position: absolute;
@@ -198,10 +215,7 @@ zan2.png) no-repeat;
 			background:url(<?php echo @IMAGE_URL;?>
 zan.png) no-repeat;
 		}
-		.fine_design .design_sample img{
-			width: 220px;
-			height: 328px;
-		}
+		
 
 
 	</style>
@@ -270,19 +284,37 @@ zan.png) no-repeat;
  	<!-- 包含3部分，左边的二级导航，中间最热商品轮播图，右边设计师的rank榜 -->
  	<div class="firstfloor">
 		<div class="subnav" id="subnav">
-			<li><a href="">清新学生</a></li>
-			<li><a href="">花样少年</a></li>
-			<li><a href="">商务白领</a></li>
-			<li><a href="">魅丽女士</a></li>
-			<li><a href="">成熟男士</a></li>
-			<li><a href="">查看更多分类</a></li>
+			<?php  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['key']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['designCate']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->key => $_smarty_tpl->tpl_vars['key']->value){
+$_smarty_tpl->tpl_vars['key']->_loop = true;
+?>
+			<li><a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value['styname'];?>
+</a></li>
+			<?php } ?>
+			<li><a>查看更多分类</a></li>
 			<div class="morecata" id="morecata">
-				<div><a href="">正装学生</a><a href="">欧美学院</a><a href="">休闲学弟</a><a href="">清纯学妹</a></div>
-				<div><a href="">小正太</a><a href="">个性帅哥</a><a href="">高傲男神</a><a href="">冷傲少女</a></div>
-				<div><a href="">初入职场</a><a href="">小有名气</a><a href="">职场达人</a><a href="">老总服饰</a></div>
-				<div><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a></div>
-				<div><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a></div>
-				<div><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a><a href="">花样少年</a></div>
+				<?php  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['key']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['devideCate']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->key => $_smarty_tpl->tpl_vars['key']->value){
+$_smarty_tpl->tpl_vars['key']->_loop = true;
+?>
+				<div>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[0]['styname'];?>
+</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[1]['styname'];?>
+</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[2]['styname'];?>
+</a>
+					<a href="<?php echo @__MODULE__;?>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[3]['styname'];?>
+</a>
+				</div>
+				<?php } ?>
 		    </div>
 		</div>
 		<div class="hotshow">
@@ -316,23 +348,47 @@ $_smarty_tpl->tpl_vars['key']->_loop = true;
 				<div class="float_title"></div>
 			</div>
 			<div class="design_sample" >
-				<!-- <a href=""><img src="<?php echo @IMAGE_URL;?>
-clothesimage/105.jpg"></a> -->
+				<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[0]['id'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[0]['show_img'];?>
+">
+				</a>
+				<!-- <img class="honor" src="<?php echo @IMAGE_URL;?>
+honor.png">  -->
 				<div class="love_count"></div>
 			</div>
 			<div class="design_sample">
-				<!-- <a href=""><img src="<?php echo @IMAGE_URL;?>
-clothesimage/106.jpg"></a> -->
+				<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[1]['id'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[1]['show_img'];?>
+">
+				</a> 
+				<!-- <img class="honor" src="<?php echo @IMAGE_URL;?>
+honor2.png">  -->
 				<div class="love_count"></div>
 			</div>	
 			<div class="design_sample">
-				<!-- <a href=""><img src="<?php echo @IMAGE_URL;?>
-clothesimage/107.jpg"></a> -->
+				<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[2]['id'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[2]['show_img'];?>
+">
+				</a> 
+				<!-- <img class="honor" src="<?php echo @IMAGE_URL;?>
+honor3.png">  -->
 				<div class="love_count"></div>
 			</div>
 			<div class="design_sample">
-				<!-- <a href=""><img src="<?php echo @IMAGE_URL;?>
-clothesimage/108.jpg"></a> -->
+				<a href="<?php echo @__MODULE__;?>
+/Common/details?id=<?php echo $_smarty_tpl->tpl_vars['key']->value[3]['id'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['key']->value[3]['show_img'];?>
+">
+				</a> 
+				<!-- <img class="honor" src="<?php echo @IMAGE_URL;?>
+honor4.png">  -->
 				<div class="love_count"></div>
 			</div>
 		</div>							

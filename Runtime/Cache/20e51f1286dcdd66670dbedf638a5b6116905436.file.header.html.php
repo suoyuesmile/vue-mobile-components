@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-19 17:57:20
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-31 23:43:57
          compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\common\header.html" */ ?>
-<?php /*%%SmartyHeaderCode:273155857aa4a61c340-00265072%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:24301586517d3c7d4d5-69487224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '20e51f1286dcdd66670dbedf638a5b6116905436' => 
     array (
       0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\common\\header.html',
-      1 => 1482141231,
+      1 => 1483199005,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '273155857aa4a61c340-00265072',
+  'nocache_hash' => '24301586517d3c7d4d5-69487224',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5857aa4a8b04d',
+  'unifunc' => 'content_586517d44d2ab',
   'variables' => 
   array (
     'title' => 0,
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5857aa4a8b04d')) {function content_5857aa4a8b04d($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_586517d44d2ab')) {function content_586517d44d2ab($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -40,6 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		font-family: "arial";
 		font-size: 16px;
 		text-align: center;
+		cursor:default;
 		}
 
 		/*****************************************************************************************
@@ -80,6 +81,11 @@ logo1.jpg');
 			float: left;
 			display: block;
 			color: #fe008d;
+			/*cursor:pointer;*/
+		}
+		.top .logined_status .login_username a{
+			color: #fe008d;
+			text-decoration: none;
 		}
 		/*下拉按钮*/
 		.top .logined_status .dropmeun_button{
@@ -363,6 +369,7 @@ fancy_close.png');
 			height: 30px;
 			width: 70px;
 			opacity: 0.5;
+			cursor:pointer;
 		}
 		.reflash:hover{
 			opacity: 1;
@@ -388,6 +395,7 @@ fancy_close.png');
 			background: 000px;
 			border-radius: 6px;
 			border: 1px solid rgba(204, 204, 204, 0.7);
+			cursor:pointer;
 		}
 		.login_btn:hover{
 			color: #FE008D;
@@ -402,6 +410,7 @@ fancy_close.png');
 			background: 000px;
 			border-radius: 6px;
 			border: 1px solid rgba(204, 204, 204, 0.7);
+			cursor:pointer;
 		}
 		.register_btn:hover{
 			color: #FE008D;
@@ -448,6 +457,7 @@ devide_line.png');
 			font-family: "微软雅黑";
 			color: #03a9f4;
 			opacity: 0.5;
+			cursor:pointer;
 		}
 		#turn_register:hover{
 			opacity: 1;
@@ -458,6 +468,7 @@ devide_line.png');
 			font-family: "微软雅黑";
 			color: #03a9f4;
 			opacity: 0.5;
+			cursor:pointer;
 		}
 		#turn_login:hover{
 			opacity: 1;
@@ -678,8 +689,9 @@ devide_line.png');
 		<div class="register_button" id="register_button"><a href="#">免费注册</a></div>		
 	</div>
 	<div class="logined_status" style="display: block;">
-	    <div class="login_username" id="login_username"><?php echo $_smarty_tpl->tpl_vars['user_name']->value;?>
-</div>
+	    <div class="login_username" id="login_username"><a href="<?php echo @__MODULE__;?>
+/User/userCenter"><?php echo $_smarty_tpl->tpl_vars['user_name']->value;?>
+</a></div>
 	    <div class="dropmeun_button" id="dropmeun_button">
 	    <!-- 隐藏层-下拉用户中心框 -->
 	    <!-- 包含1个头像，四个用户功能标签，分别指向4个页面 -->

@@ -1,0 +1,9 @@
+[ 2017-01-03T13:36:55+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Index/showDesign
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html"  on line 276 "&lt;/html&gt;" unclosed {foreach} tag
+
+[ 2017-01-03T13:37:21+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Index/showDesign
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html"  on line 276 "&lt;/html&gt;" unclosed {foreach} tag
+
+[ 2017-01-03T13:39:43+08:00 ] ::1 /zxyClothesPlatform/zxy1.02/ZxyClothPat/index.php/Home/Index/showDesign
+ERR: Syntax Error in template "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html"  on line 274 "&lt;/html&gt;" unclosed {foreach} tag
+
