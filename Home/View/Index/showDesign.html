@@ -180,22 +180,22 @@
  	<!-- 包含三个部分，左边的二级导航，中间最热商品轮播图，右边设计师的rank榜 -->
  	<div class="firstfloor">
 		<div class="subnav" id="subnav">
-			<li><a href="{$smarty.const.__MODULE__}/Common/designs?id=1">上衣</a></li>
-			<li><a href="{$smarty.const.__MODULE__}/Common/designs?id=1">裤子</a></li>
-			<li><a href="{$smarty.const.__MODULE__}/Common/designs?id=1">裙子</a></li>
-			<li><a href="{$smarty.const.__MODULE__}/Common/designs?id=1">鞋子</a></li>
-			<li><a href="{$smarty.const.__MODULE__}/Common/designs?id=1">套装</a></li>
+			{foreach $designCate as $key}
+			<li><a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key['catname']}</a></li>
+			{/foreach}
 			<li><a href="{$smarty.const.__MODULE__}/Common/designs?id=1">查看更多分类</a></li>
 			<div class="morecata" id="morecata">
+				{foreach $devideCate as $key}
 				<div>
-					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">衬衫</a>
-					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">T恤</a>
-					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">外套</a>
-					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">打底衫</a>
-					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">打底衫</a>
-					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">打底衫</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[0]['catname']}</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[1]['catname']}</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[2]['catname']}</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[3]['catname']}</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[4]['catname']}</a>
+					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">{$key[5]['catname']}</a>
 				</div>
-				<div>
+				{/foreach}
+				<!-- <div>
 					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">牛仔</a>
 					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">休闲裤</a>
 					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">短裤</a>
@@ -234,7 +234,7 @@
 					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">花样少年</a>
 					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">花样少年</a>
 					<a href="{$smarty.const.__MODULE__}/Common/designs?id=1">花样少年</a>
-				</div>
+				</div> -->
 		    </div>
 		</div>
 		<div class="hotshow">

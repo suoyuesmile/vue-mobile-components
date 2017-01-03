@@ -38,6 +38,13 @@ class IndexController extends Controller {
         $this->assign('user_name',$user_name);
         $index = 1;
         $title = '全部作品';
+        $midCate = new \Home\Model\CommonModel(); 
+        $resMid = $midCate->findCatTag();
+        $designCate = array_slice($resMid, 0, 5);
+        $moreCate = array_slice($resMid, 5);
+        $devideCate = array_chunk($moreCate, 6);
+        $this->assign('designCate',$designCate);
+        $this->assign('devideCate',$devideCate);
         $item = new \Home\Model\IndexModel(); 
         $result = $item->findDesign();
         $this->assign('secondfloor',$result);
@@ -141,7 +148,7 @@ class IndexController extends Controller {
 
         // show_bug($devideResult);
         $item = new \Home\Model\CommonModel(); 
-        $result = $item->findStyTag();
+        $result = $item->findCatTag();
         // show_bug($result);
         // show_bug($result);
     }

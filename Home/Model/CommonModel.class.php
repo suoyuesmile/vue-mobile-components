@@ -33,6 +33,7 @@ class CommonModel extends Model{
 	function findCatTag(){
 		$cate = M('cate');
 		$result = $cate->field('catname')->table('zxy_design_category')->select();
+		// show_bug($result);
 		return $result;
 	}
 }

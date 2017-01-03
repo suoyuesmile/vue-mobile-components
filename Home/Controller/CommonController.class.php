@@ -30,7 +30,7 @@ class CommonController extends Controller {
       	$this->display('bottom2');
 	}
 	function details(){
-		$user_name = session('user_name');
+		    $user_name = session('user_name');
         $this->assign('user_name',$user_name);
         $designId = $_GET['id'];
         $index = 6;

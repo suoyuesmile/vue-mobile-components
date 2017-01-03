@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-31 23:06:41
+<?php /* Smarty version Smarty-3.1.6, created on 2017-01-03 13:40:37
          compiled from "E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\Index\showDesign.html" */ ?>
 <?php /*%%SmartyHeaderCode:2417058652c757c16a4-59158300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3e0f38c75dc38c11db4087fa2b714cd203af6cc0' => 
     array (
       0 => 'E:/apacheRoot/zxyClothesPlatform/zxy1.02/ZxyClothPat/Home/View\\Index\\showDesign.html',
-      1 => 1483196798,
+      1 => 1483422034,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_58652c75ce1c9',
   'variables' => 
   array (
-    'secondfloor' => 0,
+    'designCate' => 0,
     'key' => 0,
+    'devideCate' => 0,
+    'secondfloor' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -210,34 +212,45 @@ zan.png) no-repeat;
  	<!-- 包含三个部分，左边的二级导航，中间最热商品轮播图，右边设计师的rank榜 -->
  	<div class="firstfloor">
 		<div class="subnav" id="subnav">
+			<?php  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['key']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['designCate']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->key => $_smarty_tpl->tpl_vars['key']->value){
+$_smarty_tpl->tpl_vars['key']->_loop = true;
+?>
 			<li><a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">上衣</a></li>
-			<li><a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">裤子</a></li>
-			<li><a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">裙子</a></li>
-			<li><a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">鞋子</a></li>
-			<li><a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">套装</a></li>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value['catname'];?>
+</a></li>
+			<?php } ?>
 			<li><a href="<?php echo @__MODULE__;?>
 /Common/designs?id=1">查看更多分类</a></li>
 			<div class="morecata" id="morecata">
+				<?php  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['key']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['devideCate']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->key => $_smarty_tpl->tpl_vars['key']->value){
+$_smarty_tpl->tpl_vars['key']->_loop = true;
+?>
 				<div>
 					<a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">衬衫</a>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[0]['catname'];?>
+</a>
 					<a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">T恤</a>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[1]['catname'];?>
+</a>
 					<a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">外套</a>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[2]['catname'];?>
+</a>
 					<a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">打底衫</a>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[3]['catname'];?>
+</a>
 					<a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">打底衫</a>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[4]['catname'];?>
+</a>
 					<a href="<?php echo @__MODULE__;?>
-/Common/designs?id=1">打底衫</a>
+/Common/designs?id=1"><?php echo $_smarty_tpl->tpl_vars['key']->value[5]['catname'];?>
+</a>
 				</div>
-				<div>
+				<?php } ?>
+				<!-- <div>
 					<a href="<?php echo @__MODULE__;?>
 /Common/designs?id=1">牛仔</a>
 					<a href="<?php echo @__MODULE__;?>
@@ -306,7 +319,7 @@ zan.png) no-repeat;
 /Common/designs?id=1">花样少年</a>
 					<a href="<?php echo @__MODULE__;?>
 /Common/designs?id=1">花样少年</a>
-				</div>
+				</div> -->
 		    </div>
 		</div>
 		<div class="hotshow">
