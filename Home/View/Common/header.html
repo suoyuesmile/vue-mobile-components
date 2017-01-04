@@ -286,7 +286,7 @@
 			font-size: 24px;
 			margin-left: 40px; 
 			text-align: left; 
-			margin-top:52px;
+			margin-top:32px;
 			margin-bottom: 20px;
 			/*margin-left: 50px; */
 
@@ -298,8 +298,8 @@
 		}
 		form .txt{
 			font-family:arial;
-			font-size: 13px; 
-			margin-top: 12px;
+			font-size: 14px; 
+			margin-top: 20px;
 			height: 30px;
 			width: 230px;
 			border: 1px solid rgba(204, 204, 204, 0.7);	
@@ -311,7 +311,7 @@
 			color: #fe008d;
 		}
 		.captcha{
-			margin-top: 12px;
+			margin-top: 0px;
 			height: 40px;
 			width: 250px;
 		}
@@ -344,36 +344,47 @@
 			opacity: 1;
 		}
 		.login_content form .forget_passwd{
-			margin-top: 20px;
+			margin-top: 0px;
 			height: 30px;
 		}
 		.login_content form .forget_passwd a{
 			text-decoration: none;
 			color: #4d3126;	
 		}
+		.login_forget{
+			height: 30px;
+			width: 230px;
+		}
+		.forget_passwd{
+			float: left;
+		}
 		.forget_passwd a:hover{
 			color: #FE008D;
 		}
 		.login_content form .login_btn{
 			font-family: "微软雅黑";
-			position: absolute;
+			/*position: absolute;
 			left: 210px;
-			bottom: 78px;
+			bottom: 78px;*/
+			margin-left: 50px;
 			height: 30px;
 			width: 60px;
 			background: 000px;
 			border-radius: 6px;
 			border: 1px solid rgba(204, 204, 204, 0.7);
 			cursor:pointer;
+			float: left;
 		}
 		.login_btn:hover{
 			color: #FE008D;
 		}
 		.register_content form .register_btn{
 			font-family: "微软雅黑";
-			position: absolute;
+			/*position: absolute;
 			left: 100px;
-			bottom: 55px;
+			bottom: 55px;*/
+			margin-left: 150px;
+			margin-top: 10px;
 			height: 30px;
 			width: 80px;
 			background: 000px;
@@ -442,7 +453,7 @@
 			opacity: 1;
 		}
 		.register_term {
-			margin-top: 1px;
+			margin-top: 0px;
 		}
 		.txt_term,.vip_register{
 			font-size: 13px;
@@ -454,6 +465,33 @@
 			text-align: left;
 			margin-left: 20px;
 		}	   
+		.register_content form .txt{
+			margin-top: 0px;
+		}	 
+		.register_content .error{
+			height: 20px;
+			width: 230px;
+			/*border: 1px solid rgba(204, 204, 204, 0.7);*/
+			font-family:"微软雅黑";
+			color: red;
+			font-size: 10px; 
+			line-height: 20px;
+		} 
+		.register_content .error img{
+			/*margin-top: 3px;*/
+			line-height: 20px;
+			margin-right: 3px; 
+			height: 12px;
+			width:12px;
+		}
+		.login_content .error{
+			height: 20px;
+			width: 230px;
+			/*border: 1px solid rgba(204, 204, 204, 0.7);*/
+			font-family:"微软雅黑";
+			font-size: 10px; 
+			line-height: 20px;
+		} 
 	</style>
 	<script type="text/javascript">
 		window.onload = function(){
@@ -616,9 +654,137 @@
 		     * 函数写在index和showDesign进行轮播
 		     * 调用函数slidePlay()
 		     */    	
-		    
-
-
+		     /***********************************************************************************
+		     *10.注册验证
+		     * 验证用户名是否重名
+		     * 验证其他字段是否符合要求
+		     */
+		    //输入框逐个判断
+		    var register_form=document.getElementById('register_form');
+		    var item=register_form.getElementsByTagName('input');
+		    var register_div=register_form.getElementsByClassName('error');
+		    item[0].onfocus=function(){
+		    	register_div[0].innerHTML='中英文均可,长度为6-14个字符';
+		    	register_div[0].style.color='grey';
+		    }
+		    item[1].onfocus=function(){
+		    	register_div[1].innerHTML='中英文均可,长度为6-14个字符';
+		    	register_div[1].style.color='grey';
+		    }
+		    item[2].onfocus=function(){
+		    	register_div[2].innerHTML='确认密码与密码一致';
+		    	register_div[2].style.color='grey';
+		    }
+		    item[4].onclick=function(){
+		    	register_div[2].innerHTML='';
+		    	register_div[2].style.color='grey';
+		    }
+		    for(var i=0;i<3;i++){
+		    	item[i].index = i;
+		    	item[i].onblur=function(){
+		    		register_div[this.index].style.color='red';
+			    	register_div[this.index].innerHTML='';
+			    	if(this.value!=''){		
+			    		if(this.index!=2){
+			    			checkinput(this.name+'='+this.value,register_div[this.index]);
+			    		}else{
+			    			var queryString=item[1].name+'='+item[1].value+'&'+this.name+'='+this.value
+			    			checkinput(queryString,register_div[this.index]);
+			    			console.log(queryString);
+			    		}	    		
+			    	}
+			    } 
+		    }		    
+		    // 点击提交按钮的时候进行判断
+		    var oRegister_sub=document.getElementById('register_sub');
+		    oRegister_sub.onclick=function(){
+		     	var xhr=new XMLHttpRequest;
+		     	var register_form=document.getElementById('register_form');
+		     	var queryString=getFormQueryString('register_form');
+		     	var register_div=register_form.getElementsByClassName('error');
+				// xhr.open('get','8-2.php');
+				xhr.open('POST','{$smarty.const.__MODULE__}/User/register');
+				//请求头 没有设置
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");  
+				xhr.send(queryString);
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result = xhr.responseText;
+						console.log(result);
+						result = eval("("+result+")");
+						console.log(result);
+						clear(register_div);
+						if(result['captcha']!=null){
+							register_div[3].innerHTML=result['captcha'];
+						}
+						if(result['user_name']!=null){
+							register_div[0].innerHTML=result['user_name'];
+						}
+						if(result['password']!=null){
+							register_div[1].innerHTML=result['password'];
+						}
+						if(result['password2']!=null){
+							register_div[2].innerHTML=result['password2'];
+						}
+						if(result['register_term']!=null){
+							register_div[4].innerHTML=result['register_term'];
+						}
+					}
+					// console.log(0);
+				}
+		    }
+		     function getFormQueryString(frmID) {
+		     	var frmID=document.getElementById(frmID); 
+				var queryString = "", and = "&"; 
+				var item=frmID.getElementsByTagName('input');
+				queryString=item[0].name+'='+item[0].value;
+				for(var i=1;i<4;i++){
+					queryString+=and+item[i].name+'='+item[i].value;
+				}
+				if(item[4].checked==true){
+					queryString+=and+item[4].name+'='+item[4].value;
+				}else{
+					queryString+=and+item[4].name+'=0';
+				}
+				return queryString;
+		    }
+		    function getHsonLength(json){
+		     	// 获取json数组的长度
+	                var jsonLength=0;
+	                for (var i in json) {
+	                    jsonLength++;
+	                }
+	                return jsonLength;
+            }
+			function clear(elements){
+				for(var i=0;i<elements.length;i++){
+					elements[i].innerHTML='';
+				}
+			}
+			function checkinput(item,error){
+				var xhr=new XMLHttpRequest;
+				// xhr.open('get','8-2.php');
+				xhr.open('POST','{$smarty.const.__MODULE__}/User/checkinput');
+				//请求头 没有设置
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");  
+				xhr.send(item);
+				console.log(item);
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result = xhr.responseText;
+						result = eval("("+result+")");
+						console.log(result);
+						if(result['success']==''){
+							error.innerHTML='';
+						}
+						else{
+							for(var i in result){
+								error.innerHTML= "<img src='{$smarty.const.IMAGE_URL}false.png'>"+result[i];
+							}
+						}
+					}
+				}
+			}
 		}	
 	</script>
 	</head>
@@ -709,15 +875,19 @@
 	<div class="login_content">
 		<div class="login_title">织心米登录</div>
 		<form action="{$smarty.const.__MODULE__}/User/login" method="post">		
-			<input type="txt"  class="txt" name="user_name" id="user_name" placeholder="用户名/邮箱/手机">
+			<input type="txt" class="txt" name="user_name" id="user_name" placeholder="用户名/邮箱/手机">
 			<input type="password" class="txt" name="password" id="password" placeholder="密码">
+			<div class="error"></div>
 			<div class="captcha">
 				<input type="txt" class="captcha_txt" name="captcha" id="captcha" placeholder="验证码">
 				<img id="captcha_img1" src="{$smarty.const.__MODULE__}/User/verify"> 
 				<div class="reflash" id="reflash1">换一张</div>
 			</div>
-			<div class="forget_passwd"><a href="{$smarty.const.__MODULE__}/User/accountCenter">忘记密码？</a></div>
-			<div><input type="submit" value="登录" class="login_btn" name="submit"></div>
+			<div class="error"></div>
+			<div class="forget_login">
+				<div class="forget_passwd"><a href="{$smarty.const.__MODULE__}/User/accountCenter">忘记密码？</a></div>
+				<input type="submit" value="登录" class="login_btn" name="submit">
+			</div>	
 		</form>
 	</div>
 	<div class="devide_line"></div>
@@ -742,23 +912,27 @@
 		<div class="register_title">
 			免费注册
 		</div>
-		<form action="" method="post">		
-			<input type="txt"  class="txt" name="username" placeholder="用户名/邮箱/手机">
+		<form action="" id="register_form" method="post">		
+			<input type="txt"  class="txt" name="user_name" placeholder="用户名/邮箱/手机">
+			<div class="error"></div>
 			<input type="password" class="txt" name="password" placeholder="密码">
+			<div class="error">{$error['password']}</div>
 			<input type="password" class="txt" name="password2" placeholder="确认密码">
+			<div class="error"></div>
 			<div class="captcha">
 				<input type="txt" class="captcha_txt" name="captcha" placeholder="验证码">
 				<img id="captcha_img2" src="{$smarty.const.__MODULE__}/User/verify"> 
 				<div class="reflash" id="reflash2">换一张</div>
 			</div>
-			<input type="radio" name="register_term" class="register_term">
-			<span class="txt_term">是否同意本网站注册条款</span>
-			<div><input type="submit" value="立即注册" class="register_btn" name="submit"></div>
+			<div class="error">{$captcha}</div>
+			<input type="checkbox" name="register_term[]" class="register_term" value="1">
+			<span class="txt_term">阅读并接受《用户协议》</span><span class="error"></span>
+			<input type="button" value="立即注册" class="register_btn" id="register_sub" name="submit">
 		</form>
 	</div>
 	<div class="devide_line"></div>
 	<div class="vip_introduce">
-		<div class="vip_register"> 已经有账号，请直接<span id="turn_login">登录</span></div>	
+		<div class="vip_register">已经有账号，请直接<span id="turn_login">登录</span></div>	
 	</div>
 </div>
 </body>
