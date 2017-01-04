@@ -124,6 +124,7 @@ class UserController extends Controller {
 
     /**
      * 注册功能
+	 * 判断是否勾选协议
      * 1.判断验证码是否正确
      * 2.判断用户名符合规范
      * 3.判断密码是否符合规范
@@ -131,9 +132,51 @@ class UserController extends Controller {
      * 5.注册成功，存入session并登录
      */
     public function register(){
+		$user=new \Home\Model\UserModel();
+        if(!empty($_POST)){
+            $verify=new \Think\Verify();
+            $z = $user -> create();//集成表单验证
+            if(!$z){
+                // $error=array();
+                // $error=$user->getError();
+                // $this -> assign('error',$error);
+                // echo $error['user_name'];
+                // echo $user->getError();  
+                // print_r($error);
+                $this->ajaxReturn($user->getError());
+            }elseif (!$verify->check($_POST['captcha'])) {
+                $error['captcha']="验证码错误";
+                $this->ajaxReturn($error);  
+            }
+            else{
+                // echo "ok";
+                $user->user_name=$_POST['user_name'];
+                $user->password=$_POST['password'];
+                $success['success']='';
 
+                $rst=$user->add();
+                if($rst){
+                    $this->ajaxReturn($success);
+                }else{
+                    $this->ajaxReturn($success);
+                }
+            }
+        }else{
+            // $this->display();
+        }
     }
-
+	public function checkinput(){
+        $user=new \Home\Model\UserModel();
+        if(!empty($_POST)){
+            $z = $user -> create();
+            if (!$z) {
+                $this->ajaxReturn($user->getError());
+            }else{
+                $success['success']='';
+                $this->ajaxReturn($success);
+            }
+        }
+    }
     /**
      * 自动生成验证码
      * 1.配置验证码参数

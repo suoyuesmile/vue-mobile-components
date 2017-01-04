@@ -23,7 +23,7 @@ function show_bug($array){
 
 }
 //定义网站入口
-define("WEB_ROOT","http://localhost/zxyClothesPlatform/zxy1.02/zxyclothpat/");
+define("WEB_ROOT","http://localhost/zxyClothPat/zxyclothpat/");
 //定义css js image路径的常量
 define("CSS_URL",WEB_ROOT."Public/Home/css/");
 define("IMAGE_URL",WEB_ROOT."Public/Home/images/");
