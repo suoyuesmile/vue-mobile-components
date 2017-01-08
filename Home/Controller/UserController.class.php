@@ -101,27 +101,40 @@ class UserController extends Controller {
      * 0.使用tp框架集成的方法
      **/
     public function login(){
+        $login_rule=array(
+            array('user_name','require','请输入正确的用户名'),
+            array('user_name','/^\S{6,14}$/','请输入正确的用户名'),
+            // array('user_name','checkName','此用户名太受欢迎，请换一个',0,'callback'),
+            array('password','/^\S{6,14}$/','请输入6-16位密码，区分大小写！'),
+            // array('password','checkNamePwd','密码不正确')
+        );
         if(!empty($_POST))
         {
+            $user = new \Home\Model\UserModel();
             $verify=new \Think\Verify();
-            if(!$verify->check($_POST['captcha'])){
-                echo "验证码错误";
+            $z = $user ->validate($login_rule)->create();//集成表单验证
+            if(!$z){
+                $this->ajaxReturn($user->getError());
             }
-            else{
-                $user = new \Home\Model\UserModel(); 
+            elseif(!$verify->check($_POST['captcha'])){
+                $error['captcha']="验证码错误";
+                $this->ajaxReturn($error);  
+            }
+            else{    
                 $res=$user->checkNamePwd($_POST['user_name'],$_POST['password']);
-                if($res==false){
-                    echo "用户名或密码错误";            
+                if($res['namePwd']!=''){
+                    $error['user_name']=$res['namePwd'];
+                    $this->ajaxReturn($error);             
                 }else{
                     session('user_name',$res['user_name']);
                     session('id',$res['id']);
-                    echo session('user_name');
+                    $success['success']='';
+                    $this->ajaxReturn($success);
                     $this->redirect('Index/index');   
                 }   
             }
         }
     }
-
     /**
      * 注册功能
 	 * 判断是否勾选协议
@@ -137,12 +150,6 @@ class UserController extends Controller {
             $verify=new \Think\Verify();
             $z = $user -> create();//集成表单验证
             if(!$z){
-                // $error=array();
-                // $error=$user->getError();
-                // $this -> assign('error',$error);
-                // echo $error['user_name'];
-                // echo $user->getError();  
-                // print_r($error);
                 $this->ajaxReturn($user->getError());
             }elseif (!$verify->check($_POST['captcha'])) {
                 $error['captcha']="验证码错误";

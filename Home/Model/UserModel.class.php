@@ -35,12 +35,14 @@ class UserModel extends Model{
 		}
 	}
 	function checkNamePwd($user_name,$password){
-		$info=$this->getBymg_name($user_name);
-				if($info!=null)
+		$info=$this->getByuser_name($user_name);
+		$error['namePwd']='';
+		if($info!=null)
 		{
 			if($info['password']!=$password)
 			{
-				return false;
+				$error['namePwd']='密码错误，请重新输入';
+				return $error;
 			}
 			else
 			{
@@ -49,7 +51,8 @@ class UserModel extends Model{
 		}
 		else
 		{
-			return false;
+			$error['namePwd']='该用户名还未注册';
+			return $error;
 		}
 	}
 }	
