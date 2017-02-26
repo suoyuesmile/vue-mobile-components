@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-12-30 10:28:43
+Date: 2017-02-07 14:40:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -129,12 +129,12 @@ INSERT INTO `zxy_design` VALUES ('3', 'A100000003', '粉红条纹淑女T恤', '1
 INSERT INTO `zxy_design` VALUES ('4', 'A100000004', '女士风度大外套', '2', '2', '未生产', '400', '334', '344', '4.png', '4', null, '2', '1', null);
 INSERT INTO `zxy_design` VALUES ('5', 'A100000005', '黑色酷劲女士卫衣', '4', '2', '未生产', '500', '22', '324', '5.png', '5', null, '1', '2', null);
 INSERT INTO `zxy_design` VALUES ('6', 'A100000006', '条纹娇小小T恤', '3', '2', '未生产', '300', '35', '43', '6.png', '6', null, '2', '2', null);
-INSERT INTO `zxy_design` VALUES ('7', 'A100000007', '女士黑白条纹长裙', '11', '2', '未生产', '200', '123', '545', '7.png', '7', null, '1', '2', null);
-INSERT INTO `zxy_design` VALUES ('8', 'A100000008', '个性女士T恤', '12', '2', '未生产', '355', '223', '344', '8.png', '8', null, '2', '2', null);
+INSERT INTO `zxy_design` VALUES ('7', 'A100000007', '女士黑白条纹长裙', '12', '2', '未生产', '200', '123', '545', '7.png', '7', null, '1', '2', null);
+INSERT INTO `zxy_design` VALUES ('8', 'A100000008', '个性女士T恤', '13', '2', '未生产', '355', '223', '344', '8.png', '8', null, '2', '2', null);
 INSERT INTO `zxy_design` VALUES ('9', 'A100000009', '翠绿暖暖针织衫', '2', '2', '未生产', '122', '3444', '555', '9.png', '9', null, '1', '3', null);
 INSERT INTO `zxy_design` VALUES ('10', 'A100000010', '白色优雅外套', '1', '2', '未生产', '290', '223', '555', '10.png', '10', null, '1', '3', null);
-INSERT INTO `zxy_design` VALUES ('11', 'A100000011', '女生酷劲小风衣', '5', '2', '未生产', '112', '2234', '33', '11.png', '11', null, '1', '3', null);
-INSERT INTO `zxy_design` VALUES ('12', 'A100000012', '黑白清新淑女套', '7', '2', '未生产', '12', '22', '444', '12.png', '12', null, '1', '3', null);
+INSERT INTO `zxy_design` VALUES ('11', 'A100000011', '女生酷劲小风衣', '6', '2', '未生产', '112', '2234', '33', '11.png', '11', null, '1', '3', null);
+INSERT INTO `zxy_design` VALUES ('12', 'A100000012', '黑白清新淑女套', '8', '2', '未生产', '12', '22', '444', '12.png', '12', null, '1', '3', null);
 
 -- ----------------------------
 -- Table structure for zxy_designer
@@ -192,21 +192,47 @@ CREATE TABLE `zxy_design_category` (
 -- ----------------------------
 -- Records of zxy_design_category
 -- ----------------------------
-INSERT INTO `zxy_design_category` VALUES ('1', '套装', '0', '0');
+INSERT INTO `zxy_design_category` VALUES ('1', '帽子', '0', '0');
 INSERT INTO `zxy_design_category` VALUES ('2', '上衣', '0', '0');
-INSERT INTO `zxy_design_category` VALUES ('3', '裤子', '0', '0');
-INSERT INTO `zxy_design_category` VALUES ('4', '裙子', '0', '0');
-INSERT INTO `zxy_design_category` VALUES ('5', '连衣裙', '4', '0');
-INSERT INTO `zxy_design_category` VALUES ('6', '西服', '1', '0');
-INSERT INTO `zxy_design_category` VALUES ('7', '衬衫', '1', '0');
-INSERT INTO `zxy_design_category` VALUES ('8', '短裙', '4', '0');
-INSERT INTO `zxy_design_category` VALUES ('9', '鞋子', '0', '0');
-INSERT INTO `zxy_design_category` VALUES ('10', '包包', '0', '0');
-INSERT INTO `zxy_design_category` VALUES ('11', '旗袍', '1', '0');
+INSERT INTO `zxy_design_category` VALUES ('3', '裤装', '0', '0');
+INSERT INTO `zxy_design_category` VALUES ('4', '裙装', '0', '0');
+INSERT INTO `zxy_design_category` VALUES ('5', '鞋子', '0', '0');
+INSERT INTO `zxy_design_category` VALUES ('6', '鸭舌帽', '1', '0');
+INSERT INTO `zxy_design_category` VALUES ('7', '平顶帽', '1', '0');
+INSERT INTO `zxy_design_category` VALUES ('8', '嘻哈帽', '1', '0');
+INSERT INTO `zxy_design_category` VALUES ('9', '贝雷帽', '1', '0');
+INSERT INTO `zxy_design_category` VALUES ('10', '棒球帽', '1', '0');
+INSERT INTO `zxy_design_category` VALUES ('11', '包头帽', '1', '0');
 INSERT INTO `zxy_design_category` VALUES ('12', 't恤', '2', '0');
-INSERT INTO `zxy_design_category` VALUES ('13', '长裙', '4', '0');
-INSERT INTO `zxy_design_category` VALUES ('14', '帽子', '0', '0');
-INSERT INTO `zxy_design_category` VALUES ('15', '装饰品', '0', '0');
+INSERT INTO `zxy_design_category` VALUES ('13', '棉服', '2', '0');
+INSERT INTO `zxy_design_category` VALUES ('14', '针织', '2', '0');
+INSERT INTO `zxy_design_category` VALUES ('15', '夹克', '2', '0');
+INSERT INTO `zxy_design_category` VALUES ('16', '打底', '2', '0');
+INSERT INTO `zxy_design_category` VALUES ('17', '衬衫', '2', '0');
+INSERT INTO `zxy_design_category` VALUES ('18', '牛仔裤', '3', '0');
+INSERT INTO `zxy_design_category` VALUES ('19', '打底裤', '3', '0');
+INSERT INTO `zxy_design_category` VALUES ('20', '针织裤', '3', '0');
+INSERT INTO `zxy_design_category` VALUES ('21', '皮裤', '3', '0');
+INSERT INTO `zxy_design_category` VALUES ('22', '高腰裤', '3', '0');
+INSERT INTO `zxy_design_category` VALUES ('23', '阔腿裤', '3', '0');
+INSERT INTO `zxy_design_category` VALUES ('24', '连衣裙', '4', '0');
+INSERT INTO `zxy_design_category` VALUES ('25', '半身裙', '4', '0');
+INSERT INTO `zxy_design_category` VALUES ('26', '打底裙', '4', '0');
+INSERT INTO `zxy_design_category` VALUES ('27', '百褶裙', '4', '0');
+INSERT INTO `zxy_design_category` VALUES ('28', '皮裙', '4', '0');
+INSERT INTO `zxy_design_category` VALUES ('29', '复古裙装', '4', '0');
+INSERT INTO `zxy_design_category` VALUES ('30', '高跟鞋', '5', '0');
+INSERT INTO `zxy_design_category` VALUES ('31', '皮鞋', '5', '0');
+INSERT INTO `zxy_design_category` VALUES ('32', '运动鞋', '5', '0');
+INSERT INTO `zxy_design_category` VALUES ('33', '平底鞋', '5', '0');
+INSERT INTO `zxy_design_category` VALUES ('34', '布鞋', '5', '0');
+INSERT INTO `zxy_design_category` VALUES ('35', '滑板鞋', '5', '0');
+INSERT INTO `zxy_design_category` VALUES ('36', '旗袍', '6', '0');
+INSERT INTO `zxy_design_category` VALUES ('37', '内衣', '6', '0');
+INSERT INTO `zxy_design_category` VALUES ('38', '手套', '6', '0');
+INSERT INTO `zxy_design_category` VALUES ('39', '围巾', '6', '0');
+INSERT INTO `zxy_design_category` VALUES ('40', 'T恤', '6', '0');
+INSERT INTO `zxy_design_category` VALUES ('41', '面罩', '6', '0');
 
 -- ----------------------------
 -- Table structure for zxy_design_cate_style
@@ -223,20 +249,35 @@ CREATE TABLE `zxy_design_cate_style` (
 -- ----------------------------
 -- Records of zxy_design_cate_style
 -- ----------------------------
-INSERT INTO `zxy_design_cate_style` VALUES ('1', '清新学生', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('2', '商务白领', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('3', '魅力女士', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('4', '成熟男士', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('5', '中国风', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('6', '欧美风', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('7', '学院风', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('8', '田园清新', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('9', '少数民族', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('10', '个性自然', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('11', '英伦风格', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('12', '典雅时尚', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('13', '现代元素', '0', '0');
-INSERT INTO `zxy_design_cate_style` VALUES ('14', '复古潮流', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('1', '魅力女装', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('2', '成熟男装', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('3', '清新学生', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('4', '国风少年', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('5', '商务白领', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('6', '私服名媛', '1', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('7', '文艺复古', '1', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('8', '甜美可爱', '1', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('9', '街头潮人', '1', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('10', '个性潮流', '2', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('11', '时尚都市', '2', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('12', '文艺国风', '2', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('13', '酷帅装逼', '2', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('14', '清纯校服', '3', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('15', '复古学院', '3', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('16', '青春物语', '3', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('17', '大学时尚', '3', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('18', '中国风', '4', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('19', '欧美风', '4', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('20', '日韩风', '4', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('21', '外星风', '4', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('22', '程序员风', '5', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('23', '社交精英', '5', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('24', '正式派对', '5', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('25', '商业大佬', '5', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('26', '运动装', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('27', '休闲装', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('28', '家里蹲', '0', '0');
+INSERT INTO `zxy_design_cate_style` VALUES ('29', '睡觉穿', '0', '0');
 
 -- ----------------------------
 -- Table structure for zxy_design_check
@@ -302,7 +343,7 @@ INSERT INTO `zxy_design_image` VALUES ('8', '', '', null, '8_big.png', null);
 INSERT INTO `zxy_design_image` VALUES ('9', '', '', null, '9_big.png', null);
 INSERT INTO `zxy_design_image` VALUES ('10', '', '', null, '10_big.png', null);
 INSERT INTO `zxy_design_image` VALUES ('11', '', '', null, '11_big.png', null);
-INSERT INTO `zxy_design_image` VALUES ('12', '', '', null, '1２_big.png', null);
+INSERT INTO `zxy_design_image` VALUES ('12', '', '', null, '12_big.png', null);
 
 -- ----------------------------
 -- Table structure for zxy_topic

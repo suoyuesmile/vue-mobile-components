@@ -1,0 +1,15 @@
+[ 2017-02-26T15:31:32+08:00 ] ::1 /
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-02-26T15:35:47+08:00 ] ::1 /
+ERR: Access denied for user ''@'localhost' (using password: NO)
+
+[ 2017-02-26T15:35:52+08:00 ] ::1 /
+ERR: Access denied for user ''@'localhost' (using password: NO)
+
+[ 2017-02-26T15:38:45+08:00 ] ::1 /
+ERR: Access denied for user ''@'localhost' (using password: NO)
+
+[ 2017-02-26T15:39:48+08:00 ] ::1 /
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
