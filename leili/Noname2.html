@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>商品</title>
+  <style>
+    #nav a{
+	    border:1px solid #000;
+	}
+	#show img{
+	    width:200px;
+		display:none;
+	}
+	/*第一和二幅图的动画*/
+	@-webkit-keyframes sp1Anim{
+	     0%{
+		    transform: translate(-200px);
+		 }
+		 100%{
+		    transform: translate(0);
+		 }
+	}
+	#sp1:target{
+	    display:inline-block;
+		-webkit-animation: sp1Anim 2s linear 0s 1 normal;
+		-webkit-animation-fill-mode: both;
+	}
+
+	@-webkit-keyframes sp2Anim{
+	     0%{
+		    transform: translateY(-200px);
+		 }
+		 100%{
+		    transform: translateY(0);
+		 }
+	}
+	#sp2:target{
+	    display:inline-block;
+		-webkit-animation: sp2Anim 2s linear 0s 1 normal;
+		-webkit-animation-fill-mode: both;
+	}
+
+
+	/*针对商品3的动画，缩放*/
+	@-webkit-keyframes sp3Anim{
+	    0%{
+		   transform: scale(0);
+		}
+		80%{
+		   transform: scale(1.2);
+		}
+		100%{
+		   transform: scale(1)
+		}
+	}
+
+	#sp3:target{
+	    display:inline-block;
+		-webkit-animation: sp3Anim 2s;
+		-webkit-animation-fill-mode:both;
+	}
+
+	/*针对图4的动画，旋转*/
+	@-webkit-keyframes sp4Anim{
+	   0%{
+	      transform: rotate(0deg);
+	   }
+	   100%{
+	      transform: rotate(360deg);   
+	   }
+	}
+	#sp4:target{
+	   display:inline-block;
+	   -webkit-animation:sp4Anim 2s;
+	   -webkit-animation-fill-mode:both;
+	}
+
+  </style>
+ </head>
+
+ <body>
+    <div id="nav">
+	   <a href="#sp1">商品1</a>
+	   <a href="#sp2">商品2</a>
+	   <a href="#sp3">商品3</a>
+	   <a href="#sp4">商品4</a>
+	</div>
+	<div id="show">
+	   <img id="sp1"  src="p001.jpg" />
+	   <img id="sp2"  src="p002.jpg" />
+	   <img id="sp3"  src="p003.jpg" />
+	   <img id="sp4"  src="p004.jpg" />
+	</div>
+ </body>
+</html>
