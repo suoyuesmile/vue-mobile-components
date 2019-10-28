@@ -5,7 +5,6 @@ node_modules
 # local env files
 .env.local
 .env.*.local
-/config/debug
 
 # Log files
 npm-debug.log*
@@ -20,3 +19,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+config/debug.js
