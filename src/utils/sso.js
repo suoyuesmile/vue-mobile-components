@@ -1,16 +1,16 @@
 import axios from 'axios'
-// import Cookies from 'js-cookie'
+import Cookies from 'js-cookie'
 
 const SSO_DOMAIN =
   process.env.NODE_ENV === 'testing'
     ? 'test-sso-domain'
     : process.env.VUE_APP_SSO_DOMAIN
 
-// const isAuthorized = () => !!Cookies.get('token')
+const isAuthorized = () => !!Cookies.get('token')
 
-// const getToken = () => Cookies.get('token')
+const getToken = () => Cookies.get('token')
 
-// const removeToken = () => Cookies.remove('token')
+const removeToken = () => Cookies.remove('token')
 
 const checkToken = () => axios.get(`${SSO_DOMAIN}/api/public/sso/check_jwt`)
 
@@ -22,11 +22,11 @@ const ssoLogin = () => {
 const ssoLogout = () => {
   axios.get(`${SSO_DOMAIN}/api/public/sso/logout`).then(
     () => {
-      // removeToken()
+      removeToken()
       ssoLogin()
     },
     () => {
-      // removeToken()
+      removeToken()
       ssoLogin()
     }
   )
@@ -39,7 +39,7 @@ const setTplCookie = () => {
     })
     .then(
       res => {
-        // Cookies.set('token', res.data.token)
+        Cookies.set('token', res.data.token)
         window.location.reload()
       },
       () => {
@@ -52,12 +52,12 @@ const getStaffInfo = () =>
   axios.get(`${SSO_DOMAIN}/api/public/sso/get_userinfo`)
 
 export {
-  // isAuthorized,
-  // getToken,
+  isAuthorized,
+  getToken,
   getStaffInfo,
   setTplCookie,
   ssoLogout,
   ssoLogin,
-  // removeToken,
+  removeToken,
   checkToken
 }
