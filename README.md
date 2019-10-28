@@ -1,6 +1,6 @@
 # vue-h5-template
-
-## Project setup
+## 配置文件
+## 项目启动
 ```
 yarn install
 ```
@@ -24,6 +24,9 @@ yarn run test
 ```
 yarn run lint
 ```
+
+## 技术栈
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
