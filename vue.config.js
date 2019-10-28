@@ -12,7 +12,7 @@ module.exports = {
     // 单元测试、本地联调情况下，使用代理灰度数据
     proxy: {
       '^/api': {
-        target: 'xxx'
+        target: 'http://rest.apizza.net/mock/779766c36ecc0737b94deafee204a88e/'
       }
     }
   },

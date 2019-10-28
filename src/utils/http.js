@@ -1,35 +1,35 @@
 import axios from 'axios'
-import { getToken, removeToken, ssoLogin } from './sso'
+// import { getToken, removeToken, ssoLogin } from './sso'
 
 // axios 配置
 axios.defaults.timeout = 15000
-// axios.defaults.baseURL = process.env.VUE_APP_YC_API // 数据接口域名统一配置.env
+axios.defaults.baseURL = 'http://rest.apizza.net/mock/779766c36ecc0737b94deafee204a88e/' // 数据接口域名统一配置.env
 
 // http request 拦截器
 axios.interceptors.request.use(
-  config => {
-    const token = getToken()
+  (config) => {
+    // const token = getToken()
     config.headers = {
-      Authorization: token
+      // Authorization: token
     }
     return config
   },
-  err => {
+  (err) => {
     return Promise.reject(err)
   }
 )
 
 // http response 拦截器
 axios.interceptors.response.use(
-  response => {
+  (response) => {
     return response
   },
-  error => {
+  (error) => {
     const data = error.response.data
-    if (error.response.status === 403 && data && data.code === 1) {
-      removeToken()
-      ssoLogin()
-    }
+    // if (error.response.status === 403 && data && data.code === 1) {
+    //   removeToken()
+    //   ssoLogin()
+    // }
     return Promise.reject(data || error)
   }
 )
@@ -47,10 +47,10 @@ export function fetch (url, params = {}) {
       .get(url, {
         params: params
       })
-      .then(response => {
+      .then((response) => {
         resolve(response.data)
       })
-      .catch(err => {
+      .catch((err) => {
         reject(err)
       })
   })
@@ -75,10 +75,10 @@ export function post (
 ) {
   return new Promise((resolve, reject) => {
     axios.post(url, data, config).then(
-      response => {
+      (response) => {
         resolve(response.data)
       },
-      err => {
+      (err) => {
         reject(err)
       }
     )
@@ -102,10 +102,10 @@ export function patch (url, data = {}) {
         ]
       })
       .then(
-        response => {
+        (response) => {
           resolve(response.data)
         },
-        err => {
+        (err) => {
           reject(err)
         }
       )
@@ -115,10 +115,10 @@ export function patch (url, data = {}) {
 export function del (url, data) {
   return new Promise((resolve, reject) => {
     axios.delete(url, { data }).then(
-      response => {
+      (response) => {
         resolve(response.data)
       },
-      err => {
+      (err) => {
         reject(err)
       }
     )
@@ -136,10 +136,10 @@ export function postImage (url, data) {
     }
     formData.append('file', data)
     axios.post(url, formData, config).then(
-      response => {
+      (response) => {
         resolve(response.data)
       },
-      err => {
+      (err) => {
         reject(err)
       }
     )

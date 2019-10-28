@@ -9,7 +9,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import { login } from '@/api/user'
 
@@ -32,12 +31,14 @@ export default {
   },
   methods: {
     init () {
-      login({
-        name: '',
-        verifyCode: ''
-      }).then(res => {
-        console.log(res)
+      this.handleSubmit()
+    },
+    async handleSubmit () {
+      const token = await login({
+        username: 'shaosuo',
+        verifyCode: '123'
       })
+      console.log(token)
     }
   }
 }
