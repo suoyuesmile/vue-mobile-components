@@ -11,8 +11,7 @@ module.exports = {
   ],
   productionSourceMap: false,
   devServer: {
-    // 接口未实现情况下，使用mock
-    // before: require('./mock'),
+    before: require('./mock'),
     // 单元测试、本地联调情况下，使用代理灰度数据
     proxy: {
       '^/api': {
