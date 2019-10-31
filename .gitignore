@@ -3,6 +3,7 @@ node_modules
 /dist
 
 # local env files
+.env.js
 .env.local
 .env.*.local
 
@@ -20,4 +21,4 @@ yarn-error.log*
 *.sln
 *.sw?
 config/debug.js
-
+*.config.js
