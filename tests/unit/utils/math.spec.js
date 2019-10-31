@@ -1,6 +1,18 @@
 import { add, min } from '@/utils/math'
 
+// beforeAll(() => {
+//   console.log('beforeAll 1')
+// })
+// beforeEach(() => {
+//   console.log('beforeEach 1')
+// })
 describe('测试math方法', () => {
+  // beforeAll(() => {
+  //   console.log('beforeAll 2')
+  // })
+  // beforeEach(() => {
+  //   console.log('beforeEach 2')
+  // })
   // toBe
   it('测试加法', () => {
     expect(add(1, 3)).toBe(4)
