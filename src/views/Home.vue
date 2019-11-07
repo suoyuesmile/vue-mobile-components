@@ -1,16 +1,17 @@
 <template lang="pug">
   div(
     class="home")
-    img(
-      alt="Vue logo"
-      src="../assets/logo.png")
-    HelloWorld(
-      msg="Welcome to Your Vue.js App")
+    Button
+
+
+
+
 </template>
 
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
 import { login } from '@/api/user'
+import { Button } from 'vant'
 
 export default {
   name: 'home',
@@ -18,7 +19,7 @@ export default {
     this.init()
   },
   components: {
-    HelloWorld
+    Button
   },
   data () {
     return {

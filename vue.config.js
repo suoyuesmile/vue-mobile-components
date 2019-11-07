@@ -1,3 +1,6 @@
+const autoprefixer = require('autoprefixer')
+const pxtorem = require('postcss-pxtorem')
+
 module.exports = {
   publicPath: '',
   outputDir: 'dist',
@@ -16,6 +19,17 @@ module.exports = {
       .end()
   },
   css: {
-    sourceMap: true
+    sourceMap: true,
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          autoprefixer(),
+          pxtorem({
+            rootValue: 37.5,
+            propList: ['*']
+          })
+        ]
+      }
+    }
   }
 }
