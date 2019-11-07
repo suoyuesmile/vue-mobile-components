@@ -1,15 +1,9 @@
 <template lang="pug">
   div(
     class="home")
-    Button
-
-
-
-
+    Button(type="default") 默认按钮
 </template>
-
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
 import { login } from '@/api/user'
 import { Button } from 'vant'
 
