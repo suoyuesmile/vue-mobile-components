@@ -1,4 +1,4 @@
-import { add, min } from '@/utils/math'
+import { add, min } from '../../demo/math'
 
 // beforeAll(() => {
 //   console.log('beforeAll 1')

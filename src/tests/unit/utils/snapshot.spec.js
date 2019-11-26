@@ -1,4 +1,4 @@
-import { genConfig, genConfig2 } from '@/utils/config'
+import { genConfig, genConfig2 } from '../../demo/config'
 
 describe('测试快照', () => {
   it('测试config', () => {

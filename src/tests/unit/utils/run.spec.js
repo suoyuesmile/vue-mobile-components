@@ -1,4 +1,4 @@
-import { runCallback } from '@/utils/run'
+import { runCallback } from '../../demo/run'
 
 describe('mock', () => {
   it('测试函数是否运行', () => {
@@ -7,6 +7,6 @@ describe('mock', () => {
     runCallback(func)
     expect(func).toBeCalled()
     expect(func.mock.calls.length).toBe(2)
-    console.log(func.mock)
+    // console.log(func.mock)
   })
 })
