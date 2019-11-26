@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`测试快照 测试config 1`] = `
+Object {
+  "port": 80,
+  "target": "www.test-api.com",
+  "time": Any<Date>,
+}
+`;
+
+exports[`测试快照 测试config2 1`] = `
+Object {
+  "port": 80,
+  "target": "www.test-api.com",
+  "time": "2019",
+}
+`;
