@@ -1,31 +1,15 @@
-# vue-h5-template
-## 配置文件
-## 项目启动
-```
-yarn install
+# Suo UI
+
+## Installation
+```bash
+npm i suo-ui -S
+
+# for Vue 1.x
+npm i suo-ui@1 -S
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## Usage
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-## 技术栈
 
 
 ### Customize configuration
